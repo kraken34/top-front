@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+/************************************* TITRES *********************************************************/
+h1, h2{
+    font-family: "Roboto";
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 70px;
+    font-weight: 300;
+}
+
+/************************************LISTES A PUCE ****************************************************/
+
+#liens ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    flex-direction: row;
+    margin: auto;
+    list-style: none;
+    color: black; 
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+ #liens a{
+     color: black;
+ }
+
+#imgLogo{
+    animation-duration: 2s;
+    animation-name: animRotate;
+    animation-iteration-count: infinite;
+    width : 50%;
+    margin: auto;
+}
+
+@keyframes animRotate{
+    0% {
+        transform :rotateZ(50deg);
+    }
+
+    50%{
+        transform: rotateZ(-50deg)
+    }
+
+    100% {
+        transform : rotateZ(50deg);
+    }
+}
+
+
