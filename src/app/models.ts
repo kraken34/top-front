@@ -4,9 +4,9 @@ export class Collegue {
     listImages: string[];
 
     constructor() {
-        this.pseudo = `Stephane`
+        this.pseudo = `Stephane`;
         this.score = 300;
-        this.listImages = [`https://wallpapercave.com/wp/wp1811952.jpg`, `https://wallpapersite.com/images/pages/pic_w/1799.jpg`, `http://hdqwalls.com/wallpapers/skyscraper-movie-10k-ve.jpg`]
+        this.listImages = [`https://wallpapercave.com/wp/wp1811952.jpg`, `https://wallpapersite.com/images/pages/pic_w/1799.jpg`, `http://hdqwalls.com/wallpapers/skyscraper-movie-10k-ve.jpg`];
     }
     traiter(av:Avis){
         if(av===Avis.AIMER){
