@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Avis } from '../models';
 
 @Component({
   selector: 'app-avis',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./avis.component.scss']
 })
 export class AvisComponent implements OnInit {
+
+  @Output() click:EventEmitter<Avis> = new EventEmitter<Avis>();
+  
 
   constructor() { }
 

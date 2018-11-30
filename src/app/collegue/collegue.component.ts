@@ -8,8 +8,7 @@ import { Collegue } from '../models';
 })
 export class CollegueComponent implements OnInit {
 
-  @Input() collegue:Collegue=new Collegue();
-
+  @Input() collegue: Collegue = new Collegue();
 
   ngOnInit() {
   }
