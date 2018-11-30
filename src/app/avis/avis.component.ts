@@ -8,8 +8,15 @@ import { Avis } from '../models';
 })
 export class AvisComponent implements OnInit {
 
-  @Output() click:EventEmitter<Avis> = new EventEmitter<Avis>();
+  @Output() change:EventEmitter<Avis> = new EventEmitter<Avis>();
   
+  avisPositif() {
+    this.change.emit( Avis.AIMER);
+  }
+
+  avisNegatif() {
+    this.change.emit( Avis.DETESTER);
+  }
 
   constructor() { }
 
