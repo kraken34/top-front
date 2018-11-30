@@ -4,12 +4,45 @@
 h1, h2{
     font-family: "Roboto";
     text-align: center;
+    z-index: 20;
+}
+
+p{
+    font-family: "Roboto";
 }
 
 h2{
     margin-bottom: 70px;
     font-weight: 300;
 }
+
+
+/*********************************** ANIMATION LOGO ***************************************************/
+#imgLogo{
+    animation-duration: 2s;
+    animation-name: animRotate;
+    animation-iteration-count: infinite;
+    width : 50%;
+    margin: auto;
+    z-index: 4;
+    padding: 30px;
+}
+
+@keyframes animRotate{
+    0% {
+        transform :rotateZ(25deg);
+    }
+
+    50%{
+        transform: rotateZ(-25deg)
+    }
+
+    100% {
+        transform : rotateZ(25deg);
+    }
+}
+
+
 
 /************************************LISTES A PUCE ****************************************************/
 
@@ -30,26 +63,30 @@ h2{
      color: black;
  }
 
-#imgLogo{
-    animation-duration: 2s;
-    animation-name: animRotate;
-    animation-iteration-count: infinite;
-    width : 50%;
+
+
+/******************************************** BUTTONS *********************************************************/
+app-avis{
+    width: 100%;
+}
+
+#buttonPlace{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin: auto;
 }
 
-@keyframes animRotate{
-    0% {
-        transform :rotateZ(50deg);
-    }
-
-    50%{
-        transform: rotateZ(-50deg)
-    }
-
-    100% {
-        transform : rotateZ(50deg);
-    }
+button{
+    background-color: black;
+    padding: 14px 20px;    
+    cursor: pointer;
+    border :0;
+    text-transform: uppercase;
 }
 
-
+button a{
+    text-decoration: none;
+    font-family: "Roboto";
+    color: white;
+}
