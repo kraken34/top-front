@@ -18,3 +18,14 @@ export class Collegue {
 export enum Avis {
     AIMER, DETESTER
 }
+
+export class Vote {
+    colleg: Collegue;
+    avis: Avis;
+
+    constructor(colleg: Collegue, avis: Avis) {
+        this.colleg = colleg;
+        this.avis = avis;
+    }
+
+}

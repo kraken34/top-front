@@ -9,6 +9,7 @@ import { Avis } from '../models';
 export class AvisComponent implements OnInit {
 
   @Output() vote: EventEmitter<Avis> = new EventEmitter<Avis>();
+  // @Output() hist: EventEmitter<> = new EventEmitter();
   constructor() { }
 
   aimer() {

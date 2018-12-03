@@ -22,12 +22,5 @@ export class CollegueComponent implements OnInit {
       this.collegue.score -= 100;
     }
   }
-
-  
-  
-  public set score(s : string) {
-    this.score = s;
-  }
-  
 }
 

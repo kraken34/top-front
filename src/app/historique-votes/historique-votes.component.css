@@ -1,0 +1,9 @@
+.tour{
+   margin-left: 10px;
+    border: 20px;
+    border-color: black;
+}
+.container{
+    width: 100%;
+    min-width: 100%;;
+}
