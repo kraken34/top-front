@@ -29,3 +29,24 @@ export enum Avis {
     AIMER,
     DETESTER
 }
+
+export class Vote {
+    cible:Collegue;
+    avis:Avis;
+
+    constructor(cible:Collegue, avis:Avis){
+        this.cible = cible;
+        this.avis = avis;
+    }
+
+    toString() {
+        if(this.avis === Avis.AIMER)
+        {
+            return `${this.cible.pseudo} est adoré(e) et détient désormais un score de ${this.cible.score}`
+        }
+        else
+        {
+            return `${this.cible.pseudo} est détesté(e) et détient désormais un score de ${this.cible.score}`
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Collegue } from './models';
+import { Collegue, Vote, Avis } from './models';
 
 @Component({
   selector: 'app-root',
@@ -17,4 +17,6 @@ export class AppComponent {
   new Collegue("Carlo", "https://media.giphy.com/media/3oKHWuRz1wzaAoygZa/giphy.gif", 250),
   new Collegue("Nian", "https://media.giphy.com/media/BcZZaMtMBmakw/giphy.gif", 250),
   new Collegue("Mrs Puff", "https://media.giphy.com/media/3oKHWoYA631FfBJPuE/giphy.gif", 250)];
+
+  listVotes = [new Vote(this.listCollegues[0], Avis.AIMER), new Vote(this.listCollegues[1], Avis.DETESTER)];
 }

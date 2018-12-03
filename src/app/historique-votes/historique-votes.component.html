@@ -1,0 +1,9 @@
+<div class="alert alert-primary">Historique</div>
+<div *ngFor="let v of votes; i">
+  
+  <p class="alert alert-primary">
+      <img class="rounded" width="20%" height="50px" src="{{v.cible.avatar}}" />
+      {{v.toString()}}    
+      <button class="btn btn-outline-primary" (click)="supprimer(v)">Supprimer</button>
+  </p>
+</div>
