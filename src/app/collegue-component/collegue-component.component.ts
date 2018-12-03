@@ -16,11 +16,7 @@ export class CollegueComponentComponent implements OnInit {
   }
 
   incrementScore(avis:Avis){
-    if (avis === Avis.AIMER){
-      this.collegue.score++;
-    }else{
-      this.collegue.score--;
-    }
+    this.collegue.incrementScore(avis);
   }
 
 }
