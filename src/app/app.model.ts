@@ -1,3 +1,4 @@
+import { EventEmitter, Output, Input } from '@angular/core';
 
 
 export class Collegue{
@@ -10,4 +11,17 @@ export class Collegue{
         this.pseudo = pseudo;
         this.score = score;
     }
+
+}
+
+
+// Enum avis
+export enum Avis {AIMER, DESTESTER}
+
+export class Vote{
+
+    constructor(public collegue:Collegue, public avis:Avis) {
+    
+    }
+
 }

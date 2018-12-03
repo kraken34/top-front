@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Collegue } from './app.model';
+import { Component, Input } from '@angular/core';
+import { Collegue, Vote, Avis } from './app.model';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,16 @@ export class AppComponent {
   title = 'top-collegues-front';
 
 
-  collegue:Collegue = new Collegue('top-front/src/app/assets/images/collegue.jpg', 'Bibi', 1000);
-  collegue2:Collegue = new Collegue('top-front/src/app/assets/images/collegue.jpg', 'Gégé', 1000);
-  collegue3:Collegue = new Collegue('top-front/src/app/assets/images/collegue.jpg', 'Kiki', 1000);
+  tabCollegues:Collegue[] = [new Collegue('https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif', 'Bibi', 0),
+                                      new Collegue('https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif', 'Kiki', 0),
+                                      new Collegue('https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif', 'Gégé', 0) 
+  ];
+
+
+  tabVotes:Vote[] = [
+    new Vote(this.tabCollegues[0], Avis.AIMER),
+    new Vote(this.tabCollegues[1], Avis.DESTESTER),
+    new Vote(this.tabCollegues[2], Avis.AIMER)
+  ]
 
 }

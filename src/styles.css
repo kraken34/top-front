@@ -34,7 +34,7 @@ h2{
     }
 
     50%{
-        transform: rotateZ(-25deg)
+        transform: rotateZ(-25deg);
     }
 
     100% {
@@ -83,10 +83,43 @@ button{
     cursor: pointer;
     border :0;
     text-transform: uppercase;
+    color: white;
 }
 
 button a{
     text-decoration: none;
     font-family: "Roboto";
     color: white;
+}
+
+
+
+
+/********************************************************* LISTE COLLEGUES ***************************************************************/
+app-liste-collegue li{
+    width: 32.5%;
+    float: left;
+}
+
+#blocs{
+     display: flex;
+     justify-content: space-around;
+     align-items: flex-start;
+}
+
+#blocCollegue{
+    width: 100%;
+}
+
+
+
+
+.imgVote{
+    width: 50%;
+}
+
+.blocVote{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

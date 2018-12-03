@@ -1,17 +1,5 @@
-#rowCard{
-    padding: 50px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .card{
-    width: 30%;
     background-color: #ededed;
     padding: 15px;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 1%;
+    float: left;
 }

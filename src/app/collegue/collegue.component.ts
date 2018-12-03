@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Collegue } from '../app.model';
+import { Collegue, Avis } from '../app.model';
 
 @Component({
   selector: 'app-collegue',
@@ -9,14 +9,22 @@ import { Collegue } from '../app.model';
 export class CollegueComponent implements OnInit {
 
   @Input() collegue: Collegue;
-  @Input() collegue2:Collegue;
-  @Input() collegue3: Collegue;
 
   constructor() {
 
   }
 
   ngOnInit() {
+  }
+
+
+  // Method for increment or decrement 
+  onAvis(unAvis:Avis) {
+    if(unAvis == Avis.AIMER) {
+      this.collegue.score += 100
+    } else {
+      this.collegue.score -=100
+    }
   }
 
 }

@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  
+    <div id="imgLogo">
+      <img width="300" alt="Bière Logo" src="../assets/images/hnk-logo.png">
+  </div>
+  </div>
+  
+  <app-bandeau></app-bandeau>
+  
+  <div id="blocs">
+    <div id="blocCollegue">
+      <app-liste-collegue [collegues]="tabCollegues"></app-liste-collegue>
+    </div>
+    <div id="historiqueCollegue">
+      <p class="entete">Historique</p>
+      <app-historique-votes [votes]="tabVotes"></app-historique-votes>
+    </div>
+  </div>
