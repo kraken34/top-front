@@ -5,14 +5,17 @@ import { Collegue } from '../models';
   selector: 'app-collegue',
   templateUrl: './collegue.component.html',
   styleUrls: ['./collegue.component.css'],
-  // template:`<div>{{collegue}}</div>`
+  template:`
+  
+  `
 })
 export class CollegueComponent implements OnInit {
 
   @Input() collegue: Collegue;
-  constructor() { }
+  constructor(){}
 
   ngOnInit() {
   }
 
 }
+

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CollegueComponent } from '../collegue/collegue.component';
 
 @Component({
   selector: 'app-avis',
@@ -7,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvisComponent implements OnInit {
 
+  @Input() Collegue = new CollegueComponent()
   constructor() { }
 
-  ngOnInit() {
+  Click(){
+
   }
 
+  Click2(){
+
+  }
+
+  ngOnInit() {
+
+  }
 }
 
 
