@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Collegue, Avis } from '../models';
+import { ListeColleguesComponent } from '../liste-collegues/liste-collegues.component';
 
 @Component({
   selector: 'app-collegue',
@@ -7,7 +8,7 @@ import { Collegue, Avis } from '../models';
   styleUrls: ['./collegue.component.css'],
 })
 export class CollegueComponent implements OnInit {
-
+  @Input() listecol: ListeColleguesComponent
   @Input() collegue: Collegue
   constructor() { }
 
@@ -21,5 +22,12 @@ export class CollegueComponent implements OnInit {
       this.collegue.score -= 100;
     }
   }
+
+  
+  
+  public set score(s : string) {
+    this.score = s;
+  }
+  
 }
 

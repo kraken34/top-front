@@ -1,0 +1,9 @@
+<button class="btn-primary rounded" (click)="actualiser()">actualiser</button>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4" *ngFor="let collegue1 of lesCollegues">
+      <app-collegue [collegue]="collegue1"></app-collegue>
+    </div>
+  </div>
+</div>
