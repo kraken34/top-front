@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Avis } from '../models';
+import { HistoriqueVotesComponent } from '../historique-votes/historique-votes.component';
 
 @Component({
   selector: 'app-avis',
