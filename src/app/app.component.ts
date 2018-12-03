@@ -20,7 +20,7 @@ export class AppComponent {
     new Collegue("Dave Graham", "https://c1.staticflickr.com/7/6125/5958326452_4f80086fa2_b.jpg"),
     new Collegue("The one", "http://blog.roddet.com/images/photo.jpeg"),
     new Collegue("Nina Caprez", "https://images.arcteryx.com/athletes/large/NinaCaprez_Oliana_5.jpg"),
-    new Collegue("Adam Ondra","https://planetgrimpe.com/wp-content/uploads/2017/09/capture-decran-2017-09-18-a-22_fotor.png")
+    new Collegue("Adam Ondra","https://proxy.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fwww.up-climbing.com%2Fsystem%2Ffiles%2F2859%2Foriginal%2Foriginal_squared_adam-ondra.jpg%3F1486389561&u=https://www.up-climbing.com/system/files/2859/original/original_squared_adam-ondra.jpg?1486389561")
   ]
 
   historiqueVotes:HistoriqueVotes=new HistoriqueVotes();
