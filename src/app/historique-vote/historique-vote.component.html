@@ -1,0 +1,24 @@
+<div class="container" *ngFor="let collegueI of collegues">
+  <div class="row">
+    <div class="col-4">
+      <img class="img_histo" src="{{collegueI.lienPhoto}}">
+    </div>
+    <div class="col-8">
+      <p>
+        <b>{{collegueI.nom}} :</b>
+        <br />
+        {{collegueI.nom}}
+        <ng-container *ngIf="collegueI.score>5; else elseBlock"> est aimé </ng-container>
+        <ng-template #elseBlock>
+          <ng-container *ngIf="collegueI.score>=0; else elseBlock2"> a une popularité neutre,</ng-container>
+            <ng-template #elseBlock2>n'est pas aimé </ng-template>
+        </ng-template>
+         sont score est de : {{collegueI.score}}.
+      </p>
+
+      <button type="button" class="btn btn-danger">Supprimer</button>
+
+    </div>
+  </div>
+
+</div>

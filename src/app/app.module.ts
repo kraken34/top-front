@@ -7,6 +7,7 @@ import { BandeauComponentComponent } from './bandeau-component/bandeau-component
 import { AvisComponentComponent } from './avis-component/avis-component.component';
 import { CollegueComponentComponent } from './collegue-component/collegue-component.component';
 import { ListeColleguesComponent } from './liste-collegues/liste-collegues.component';
+import { HistoriqueVoteComponent } from './historique-vote/historique-vote.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListeColleguesComponent } from './liste-collegues/liste-collegues.compo
     BandeauComponentComponent,
     AvisComponentComponent,
     CollegueComponentComponent,
-    ListeColleguesComponent
+    ListeColleguesComponent,
+    HistoriqueVoteComponent
   ],
   imports: [
     BrowserModule,
