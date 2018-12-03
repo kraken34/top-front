@@ -10,6 +10,14 @@ export class CollegueComponent implements OnInit {
 
   @Input() collegue: Collegue;
 
+  likeUnActive(){
+      return this.collegue.score>=1000;
+  }
+
+  dislikeUnActive(){
+    return this.collegue.score<=-1000;
+  }
+
   ngOnInit() {
   }
 
