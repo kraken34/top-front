@@ -1,3 +1,5 @@
-<p>
-  liste-collegues-component works!
-</p>
+<div *ngFor= "let col of collegues">
+  
+    <app-collegue-component [collegue]="col"></app-collegue-component>
+
+</div>

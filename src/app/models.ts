@@ -1,7 +1,7 @@
 export class Collegue {
     pseudo: string;
     score: number;
-    photo: string
+    photo: string;
 
     constructor(photo:string, pseudo:string, score:number) {
         this.photo = photo
