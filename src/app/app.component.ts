@@ -9,5 +9,5 @@ import { Collegue } from './models';
 export class AppComponent {
   title = 'top-collegues-front';
 
-  collegueTest = new Collegue("test","https://www.salford.ac.uk/__data/assets/image/0008/890072/varieties/lightbox.jpg");
+  collegueTest = new Collegue("Mario","https://www.salford.ac.uk/__data/assets/image/0008/890072/varieties/lightbox.jpg");
 }

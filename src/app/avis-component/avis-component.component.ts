@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CollegueComponentComponent } from '../collegue-component/collegue-component.component';
+// import { CollegueComponentComponent } from '../collegue-component/collegue-component.component';
 
 @Component({
   selector: 'app-avis-component',
@@ -8,7 +8,7 @@ import { CollegueComponentComponent } from '../collegue-component/collegue-compo
 })
 export class AvisComponentComponent implements OnInit {
 
-  @Input() collegue:Collegue;
+  // @Input() collegue:Collegue;
 
   constructor() { }
 
