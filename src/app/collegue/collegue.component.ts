@@ -22,9 +22,18 @@ export class CollegueComponent implements OnInit {
   onAvis(unAvis:Avis) {
     if(unAvis == Avis.AIMER) {
       this.collegue.score += 100
+
     } else {
       this.collegue.score -=100
     }
+  }
+
+  isLikeActive() {
+    return this.collegue.score < 1000
+  }
+
+  isDislikeActive() {
+    return this.collegue.score > -1000
   }
 
 }

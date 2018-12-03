@@ -1,4 +1,4 @@
 <div id="buttonPlace">
-  <button (click)=aimer()>J'aime</button>
-  <button (click)=detester()>Je déteste</button>
+  <button (click)=aimer() [disabled]="!likeActive">J'aime</button>
+  <button (click)=detester() [disabled]="!dislikeActive">Je déteste</button>
 </div>
