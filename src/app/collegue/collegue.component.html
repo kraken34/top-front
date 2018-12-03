@@ -1,0 +1,6 @@
+<div style="text-align:center;border-style: solid">
+  <img src="{{collegue.avatar}}" width="300px" height="200px" alt="avatar"/>
+  <h3>{{collegue.pseudo}}</h3>
+  <div>{{collegue.score}}</div>
+  <app-avis (eventAvis)="collegue.majAvis($event)"></app-avis>
+</div>

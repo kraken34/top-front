@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bandeau-component',
-  templateUrl: './bandeau-component.component.html',
-  styleUrls: ['./bandeau-component.component.css']
+  selector: 'app-bandeau',
+  templateUrl: './bandeau.component.html',
+  styleUrls: ['./bandeau.component.css']
 })
-export class BandeauComponentComponent implements OnInit {
+export class BandeauComponent implements OnInit {
 
   titre:string;
   description:string;

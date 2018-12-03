@@ -2,11 +2,11 @@ import { Component, OnInit, Input, SystemJsNgModuleLoader } from '@angular/core'
 import { Collegue } from '../models';
 
 @Component({
-  selector: 'app-collegue-component',
-  templateUrl: './collegue-component.component.html',
-  styleUrls: ['./collegue-component.component.css']
+  selector: 'app-collegue',
+  templateUrl: './collegue.component.html',
+  styleUrls: ['./collegue.component.css']
 })
-export class CollegueComponentComponent implements OnInit {
+export class CollegueComponent implements OnInit {
 
   @Input() collegue:Collegue;
   constructor() {
