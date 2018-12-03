@@ -11,9 +11,10 @@ export class CollegueComponent implements OnInit {
 
   @Input() collegue: Collegue
 
-  onAvis(event: Avis) {
-    event == Avis.AIMER ? this.collegue.score++ : this.collegue.score--
-  }
+  onAvis(event: Avis) { event == Avis.AIMER ? this.collegue.score++ : this.collegue.score-- }
+
+  isLikeInactif() { return this.collegue.score == 1000 }
+  isDislikeInactif() { return this.collegue.score == -1000 }
 
   ngOnInit() {
   }

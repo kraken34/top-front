@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Avis } from '../model';
 
 @Component({
@@ -10,6 +10,9 @@ import { Avis } from '../model';
 export class AvisComponent implements OnInit {
 
   @Output() change: EventEmitter<Avis> = new EventEmitter<Avis>()
+
+  @Input() likeActivated: boolean = true
+  @Input() dislikeActivated: boolean = true
 
   like() { this.change.emit(Avis.AIMER) }
   dislike() { this.change.emit(Avis.DETESTER) }

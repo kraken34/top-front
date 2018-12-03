@@ -1,2 +1,2 @@
-<button (click)="like()">J'aime</button>
-<button (click)="dislike()">Je déteste</button>
+<button (click)="like()" [disabled]="likeActivated">J'aime</button>
+<button (click)="dislike()" [disabled]="dislikeActivated">Je déteste</button>

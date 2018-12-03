@@ -1,0 +1,7 @@
+<p>Historique</p>
+<div *ngFor="let item of listeVote" class="vote">
+    <img src="{{item.collegue.photo}}">
+    {{item.collegue.pseudo}}
+    <p>{{item.collegue.pseudo}} est {{appreciation(item.avis)}}, son score est de {{item.collegue.score}}</p>
+    <button (click)="delete(item)">Supprimer</button>
+</div>
