@@ -29,9 +29,5 @@ export class ListeCollegueComponent implements OnInit {
     this.collegues.push(new Collegue("https://media1.giphy.com/media/fQQbWnU2g5OcU/200w.gif?cid=3640f6095c052a595a5379624d220236", "anonymouspresident", -100))
     this.collegues.push(new Collegue("https://media3.giphy.com/media/Pjs1kqtH1KTaU/200w.gif?cid=3640f6095c052ae5315077353248ff7b", "calins69", -100))
     this.collegues.push(new Collegue("https://media3.giphy.com/media/MxRkVKrBvfzMY/200.gif?cid=3640f6095c054dfa41536a57591da7bd", "wanker", -100))
-
-    let i: number
-    for (i = 0; i < 10; i++)
-      this.collegues.push(new Collegue("https://media3.giphy.com/media/4j9XOYo6IVDK8/200w.gif?cid=3640f6095c014b58742f3734672e5218", "pseudo" + i, i))
   }
 }
