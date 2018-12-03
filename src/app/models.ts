@@ -3,20 +3,30 @@ export class Collegue {
     score: number
     listImages: string[];
 
-    constructor() {
-        this.pseudo = `Stephane`;
-        this.score = 300;
-        this.listImages = [`https://wallpapercave.com/wp/wp1811952.jpg`, `https://wallpapersite.com/images/pages/pic_w/1799.jpg`, `http://hdqwalls.com/wallpapers/skyscraper-movie-10k-ve.jpg`];
+    constructor(pseudo, score, images) {
+        this.pseudo = pseudo;
+        this.score = score;
+        this.listImages = images;
     }
-    traiter(av:Avis){
-        if(av===Avis.AIMER){
-            this.score+=100;
-        }else{
-            this.score-=100;
+    traiter(av: Avis) {
+        if (av === Avis.AIMER) {
+            this.score += 100;
+        } else {
+            this.score -= 100;
         }
     }
 
 }
 export enum Avis {
     AIMER, DETESTER
+}
+
+export class Vote {
+    collegue: Collegue;
+    avis: Avis;
+
+    constructor(collegue, avis) {
+        this.collegue = collegue;
+        this.avis = avis;
+    }
 }
