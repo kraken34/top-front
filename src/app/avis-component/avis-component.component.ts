@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-// import { CollegueComponentComponent } from '../collegue-component/collegue-component.component';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Avis } from '../models';
 
 @Component({
   selector: 'app-avis-component',
@@ -8,11 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AvisComponentComponent implements OnInit {
 
-  // @Input() collegue:Collegue;
+  @Output() action: EventEmitter<Avis> = new EventEmitter<Avis>();
+  
+  // avis:Avis;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  donnerAvisPositif(){
+    this.action.emit(Avis.AIMER);
+  }
+  donnerAvisNegatif(){
+    this.action.emit(Avis.DETESTER);
   }
 
 }

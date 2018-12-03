@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BandeauComponentComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {

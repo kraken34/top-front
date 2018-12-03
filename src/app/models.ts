@@ -4,13 +4,13 @@ export class Collegue{
 
     nom:string;
     score:number=0;
-    photo:string;
+    lienPhoto:string;
     
 
-    constructor(nom:string, photo:string){
+    constructor(nom:string, lienPhoto:string){
         this.nom = nom;
-        this.photo = photo;
+        this.lienPhoto = lienPhoto;
     }
 }
 
-enum avis {AIMER,DETESTER};
+export enum Avis {AIMER = 'AIMER',DETESTER = 'DETESTER'};
