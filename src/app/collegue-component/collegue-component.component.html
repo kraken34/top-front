@@ -1,3 +1,5 @@
-<p>
-  collegue-component works!
-</p>
+
+<img src={{collegue.lienPhoto}}>
+<p>{{collegue.pseudo}} Votre score est de : {{ collegue.score }}</p>
+
+<app-avis-component (counterChange)="onChange($event)"></app-avis-component>
