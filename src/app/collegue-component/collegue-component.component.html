@@ -1,4 +1,4 @@
 <div><img src="{{collegue.photo}}" width="250px" height="250px">
   <h3>{{collegue.score}}</h3>
-  <app-avis-component></app-avis-component>
+  <app-avis-component (eventLike)="collegue.misAvis($event)"></app-avis-component>
 </div>

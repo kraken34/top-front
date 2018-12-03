@@ -6,11 +6,14 @@ import {Avis} from './../models'
   styleUrls: ['./avis-component.component.css']
 })
 export class AvisComponentComponent implements OnInit {
+
 @Output() eventLike: EventEmitter<Avis> = new EventEmitter<Avis>();
+
   constructor() { }
 
   aimer(){
     this.eventLike.emit(Avis.AIMER);
+    
     
   }
 
