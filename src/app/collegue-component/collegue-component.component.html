@@ -1,6 +1,9 @@
-<img src={{collegue.lienPhoto}}/>
-<p>
-  {{collegue.nom}}
-  {{collegue.score}}
-</p>
-<app-avis-component (action)="incrementScore($event)"></app-avis-component>
+
+  <div class="box_Collegue">
+    <img class="img_collegue" src={{collegue.lienPhoto}} />
+    <p>
+      {{collegue.nom}}
+      {{collegue.score}}
+    </p>
+    <app-avis-component (action)="incrementScore($event)"></app-avis-component>
+  </div>
