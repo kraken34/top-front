@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Collegue } from '../models';
+import { Collegue} from '../models';
 
 @Component({
   selector: 'app-collegue',
@@ -8,8 +8,8 @@ import { Collegue } from '../models';
 })
 export class CollegueComponent implements OnInit {
 
-  @Input() collegue: Collegue;
-  constructor(){}
+@Input() collegue: Collegue
+  constructor() { }
 
   ngOnInit() {
   }
