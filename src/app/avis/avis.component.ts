@@ -11,9 +11,8 @@ export class AvisComponent implements OnInit {
   @Output() vote: EventEmitter<Avis> = new EventEmitter<Avis>();
   constructor() { }
 
-  aimer(event) {
+  aimer() {
     this.vote.emit(Avis.AIMER)
-    event
   }
 
   detester() {

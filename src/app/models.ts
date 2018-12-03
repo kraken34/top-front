@@ -13,13 +13,6 @@ export class Collegue {
         this.score = score;
     }
 
-    actualiserAvis(av: Avis) {
-        if (av == Avis.AIMER) {
-            this.score += 100;
-        } else {
-            this.score -= 100;
-        }
-    }
 }
 
 export enum Avis {
