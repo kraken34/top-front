@@ -1,5 +1,3 @@
-
-
 export class Collegue{
 
     nom:string;
@@ -18,7 +16,28 @@ export class Collegue{
             this.score--;
           }
     }
-
 }
 
 export enum Avis {AIMER = 'AIMER',DETESTER = 'DETESTER'};
+
+export class Vote{
+    collegue:Collegue;
+    avis:Avis;
+
+    constructor(collegue:Collegue, avis:Avis){
+        this.collegue=collegue;
+        this.avis=avis;
+    }
+}
+
+export class HistoriqueVotes{
+
+    votes:Vote[]=new Array<Vote>();
+
+    constructor(){
+    }
+
+    incrementHistoriqueVote(vote:Vote){
+        this.votes.splice(1,0,vote);
+      }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {HistoriqueVotes} from '../models';
 
 @Component({
   selector: 'app-historique-vote',
@@ -7,9 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HistoriqueVoteComponent implements OnInit {
 
-  @Input() collegues;
+  @Input() historiqueVotes:HistoriqueVotes;
   
-
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Collegue } from './models';
+import { Collegue, Vote, HistoriqueVotes } from './models';
 
 @Component({
   selector: 'app-root',
@@ -22,4 +22,9 @@ export class AppComponent {
     new Collegue("Nina Caprez", "https://images.arcteryx.com/athletes/large/NinaCaprez_Oliana_5.jpg"),
     new Collegue("Adam Ondra","https://planetgrimpe.com/wp-content/uploads/2017/09/capture-decran-2017-09-18-a-22_fotor.png")
   ]
+
+  historiqueVotes:HistoriqueVotes=new HistoriqueVotes();
+
+  
+
 }

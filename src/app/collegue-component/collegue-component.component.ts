@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {Collegue, Avis} from '../models';
+import { Component, OnInit, Input, Output, EventEmitter, } from '@angular/core';
+import {Collegue, Avis, Vote} from '../models';
 
 @Component({
   selector: 'app-collegue-component',
@@ -10,6 +10,8 @@ export class CollegueComponentComponent implements OnInit {
 
   @Input() collegue:Collegue;
 
+  @Output() actionVote:EventEmitter<Vote> = new EventEmitter<Vote>();
+
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +19,7 @@ export class CollegueComponentComponent implements OnInit {
 
   incrementScore(avis:Avis){
     this.collegue.incrementScore(avis);
+    this.actionVote.emit(new Vote(this.collegue,avis));
   }
 
 }
