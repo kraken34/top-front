@@ -2,11 +2,16 @@
 <div style="text-align:center" class="border border-primary">
   <app-bandeau-component></app-bandeau-component>
 </div>
-<div style="text-align:center">
+<div id="collegue-items" style="text-align:center">
 
-<app-collegue-component [collegue]="collegueChat"></app-collegue-component>
-
-<app-list-collegues-component [collegues]="collegueTab"></app-list-collegues-component>
+  <app-collegue-component [collegue]="collegueChat"></app-collegue-component>
+  <app-liste-collegues-component [collegues]="collegueTab"></app-liste-collegues-component>
 
 </div>
+
+<div>
+    <app-historique-votes [votes]="votesTab"></app-historique-votes>
+</div>
+
+
 

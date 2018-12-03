@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class=".col-xs-6 .col-md-5" *ngFor="let v of votes" >
+            <img src="{{v.collegue.lienPhoto}}">
+            {{v.collegue.pseudo}}, {{v.collegue.score}}
+            <button (click)="delete(v)">Supprimer</button>
+        </div>
+    </div>
+</div>
+

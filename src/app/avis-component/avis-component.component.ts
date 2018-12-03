@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Avis } from '../models';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Avis, Collegue } from '../models';
+import { INSPECT_MAX_BYTES } from 'buffer';
 
 @Component({
   selector: 'app-avis-component',
@@ -9,6 +10,9 @@ import { Avis } from '../models';
 export class AvisComponentComponent implements OnInit {
 
     @Output() counterChange = new EventEmitter();
+    @Input() like = true;
+    @Input() dislike = true; 
+
 
     addScore() {
       this.counterChange.emit(Avis.AIMER);

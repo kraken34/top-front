@@ -24,4 +24,15 @@ export class CollegueComponentComponent implements OnInit {
       this.collegue.score --;
     }
   }
+
+
+isMax() {
+  return this.collegue.score < 100
+}
+
+isMin() {
+  return this.collegue.score > -10
+}
+
+
 }
