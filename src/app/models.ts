@@ -6,13 +6,11 @@ export class Collegue {
     avis: AvisComponent;
     score: number;
 
-    constructor(photo, nom, avis, score) {
+    constructor(photo, nom, score) {
         this.photo = photo;
         this.nom = nom;
-        this.avis = avis;
         this.score = score;
     }
-
 }
 
 export enum Avis {
@@ -27,5 +25,4 @@ export class Vote {
         this.colleg = colleg;
         this.avis = avis;
     }
-
 }
