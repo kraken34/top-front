@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Collegue, Avis, Vote } from './models';
-import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
+//import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
 import { CollegueService } from './services/collegue.service';
 
 @Component({
