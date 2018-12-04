@@ -9,6 +9,11 @@ import { CollegueComponentComponent } from './collegue-component/collegue-compon
 import { ListeColleguesComponent } from './liste-collegues/liste-collegues.component';
 import { HistoriqueVoteComponent } from './historique-vote/historique-vote.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { CollegueService } from './services/collegue.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,9 +27,10 @@ import { AccueilComponent } from './accueil/accueil.component';
   ],
   imports: [
     BrowserModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CollegueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

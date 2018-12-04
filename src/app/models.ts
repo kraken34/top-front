@@ -9,13 +9,13 @@ export class Collegue {
         this.lienPhoto = lienPhoto;
     }
 
-    incrementScore(avis: Avis) {
-        if (avis === Avis.AIMER) {
-            this.score++;
-        } else {
-            this.score--;
-        }
-    }
+    // incrementScore(avis: Avis) {
+    //     if (avis === Avis.AIMER) {
+    //         this.score++;
+    //     } else {
+    //         this.score--;
+    //     }
+    // }
 }
 
 export enum Avis { AIMER = 'AIMER', DETESTER = 'DETESTER' };
@@ -43,7 +43,6 @@ export class HistoriqueVotes {
 
     supprimerVote(voteI: Vote) {
         
-    console.log('suppression ici');
         this.votes = this.votes.filter(v => v !== voteI)
     }
 }
