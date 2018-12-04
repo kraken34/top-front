@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Collegue, Avis } from '../model';
+import { environment } from 'src/environments/environment';
+
+const URL_BACKEND = environment.backendUrl
 
 @Injectable({
   providedIn: 'root'
