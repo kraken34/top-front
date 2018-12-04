@@ -9,6 +9,8 @@ import { CollegueComponent } from './collegue/collegue.component';
 import { ListeColleguesComponent } from './liste-collegues/liste-collegues.component';
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { CollegueService } from './services/collegue.service';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { AccueilComponent } from './accueil/accueil.component';
     BrowserModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CollegueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

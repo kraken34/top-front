@@ -11,18 +11,6 @@ export class Collegue {
         this.avatar = avatar;
         this.pseudo = pseudo;
     }
-
-    majAvis(event:Avis)
-    {
-        if(event === Avis.AIMER)
-        {
-            this.score += 100;
-        }
-        else
-        {
-            this.score -= 100;
-        }
-    }
 }
 
 export enum Avis {

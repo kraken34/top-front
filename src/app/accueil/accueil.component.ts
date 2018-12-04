@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Collegue, Vote } from '../models';
+import { CollegueService } from '../services/collegue.service';
 
 @Component({
   selector: 'app-accueil',
@@ -12,21 +13,12 @@ export class AccueilComponent implements OnInit {
   listCollegues:Collegue[];
   listVotes:Vote[];
 
-  constructor() {
-    this.onRefrech();
-    this.title = 'top-collegues-front';
-    this.listCollegues = [new Collegue("Patrick", "https://media.giphy.com/media/eHpWHuEUxHIre/giphy.gif", 500),
-    new Collegue("Bob", "https://media.giphy.com/media/DROP5YnPcJLLG/giphy.gif", 500),
-    new Collegue("Garry", "https://media.giphy.com/media/9pnP2yxqjheFO/giphy.gif", 500),
-    new Collegue("Cpt Krabs", "https://media.giphy.com/media/gXhBZfzijya76/giphy.gif", 500),
-    new Collegue("Sandy", "https://media.giphy.com/media/l1Ku53fLq0C2KYWsg/giphy.gif", 500),
-    new Collegue("Plancton", "https://media.giphy.com/media/3ohzAiVqeYVSaqoP6w/giphy.gif", 500),
-    new Collegue("Carlo", "https://media.giphy.com/media/3oKHWuRz1wzaAoygZa/giphy.gif", 500),
-    new Collegue("Nian", "https://media.giphy.com/media/BcZZaMtMBmakw/giphy.gif", 500),
-    new Collegue("Mrs Puff", "https://media.giphy.com/media/3oKHWoYA631FfBJPuE/giphy.gif", 500)]; 
+  constructor(private _collegueService:CollegueService) {
+   
   }
 
   onVote(unVote:Vote) {
+    //Ajouter un vote dans l'historique
     this.listVotes.unshift(unVote);
   }
 
@@ -35,6 +27,10 @@ export class AccueilComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.onRefrech();
+    this.title = 'top-collegues-front';
+    this._collegueService.listerCollegues()
+    .then( c => this.listCollegues = c); 
   }
 
 }
