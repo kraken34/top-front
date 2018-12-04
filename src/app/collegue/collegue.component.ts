@@ -16,10 +16,12 @@ export class CollegueComponent implements OnInit {
   }
 
   actualiserAvis(av: Avis) {
-    if (av == Avis.AIMER) {
-      this.collegue.score += 100;
-    } else {
-      this.collegue.score -= 100;
+    if(this.collegue.score <= 1000 || this.collegue.score >= -1000){
+      if (av == Avis.AIMER) {
+        this.collegue.score += 100;
+      } else {
+        this.collegue.score -= 100;
+      }
     }
   }
 }
