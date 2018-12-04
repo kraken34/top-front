@@ -1,2 +1,2 @@
-<button type="button" class="btn btn-outline-primary" (click)="like()">J'aime</button>
-<button type="button" class="btn btn-outline-danger" (click)="dislike()">Je déteste</button>
+<button type="button" class="btn btn-outline-primary" (click)="like()" [disabled]="disableLike">J'aime</button>
+<button type="button" class="btn btn-outline-danger" (click)="dislike()" [disabled]="disableDislike">Je déteste</button>

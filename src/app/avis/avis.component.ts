@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, NgModule } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, NgModule, Input } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Avis } from '../models'
 
@@ -15,6 +15,8 @@ import { Avis } from '../models'
 export class AvisComponent implements OnInit {
 
   @Output() eventAvis: EventEmitter<Avis> = new EventEmitter<Avis>();
+  @Input() disableLike:boolean = false;
+  @Input() disableDislike:boolean = false;
   
   constructor() { }
 

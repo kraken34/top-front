@@ -16,11 +16,11 @@ export class Collegue {
     {
         if(event === Avis.AIMER)
         {
-            this.score += 10;
+            this.score += 100;
         }
         else
         {
-            this.score -= 10;
+            this.score -= 100;
         }
     }
 }

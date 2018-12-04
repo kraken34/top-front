@@ -14,7 +14,7 @@ export class HistoriqueVotesComponent implements OnInit {
   }
 
   supprimer(vote:Vote) {
-    this.votes = this.votes.filter(v=> v != vote);
+    this.votes.splice(this.votes.findIndex(v=> v === vote), 1);
   }
 
   ngOnInit() {

@@ -2,5 +2,5 @@
   <img class="rounded mx-auto d-block" src="{{collegue.avatar}}" alt="avatar" width="100%" height="200px"/>
   <h3>{{collegue.pseudo}}</h3>
   <div>{{collegue.score}}</div>
-  <app-avis (eventAvis)="collegue.majAvis($event)"></app-avis>
+  <app-avis (eventAvis)="onAvis($event)" [disableLike]="isLiked()" [disableDislike]="isDisliked()"></app-avis>
 </div>

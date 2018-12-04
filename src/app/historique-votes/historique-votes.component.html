@@ -1,6 +1,5 @@
 <div class="alert alert-primary">Historique</div>
-<div *ngFor="let v of votes; i">
-  
+<div *ngFor="let v of votes">
   <p class="alert alert-primary">
       <img class="rounded" width="20%" height="50px" src="{{v.cible.avatar}}" />
       {{v.toString()}}    
