@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Collegue, Avis } from '../models';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Collegue } from '../models';
 
 
 @Component({
@@ -11,11 +11,11 @@ export class ListeColleguesComponent implements OnInit {
 
   @Output() actu = new EventEmitter();
 
-  @Input() lesCollegues:Collegue[];
+  @Input() lesCollegues: Collegue[];
 
   constructor() { }
 
-  actualiser(){
+  actualiser() {
     this.actu.emit()
   }
 
