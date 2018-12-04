@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Collegue, Avis } from '../app.model';
+import { CollegueService } from '../services/collegue.service';
 
 @Component({
   selector: 'app-collegue',
@@ -10,7 +11,7 @@ export class CollegueComponent implements OnInit {
 
   @Input() collegue: Collegue;
 
-  constructor() {
+  constructor(private aService:CollegueService) {
 
   }
 
@@ -18,15 +19,13 @@ export class CollegueComponent implements OnInit {
   }
 
 
-  // Method for increment or decrement 
-  onAvis(unAvis:Avis) {
-    if(unAvis == Avis.AIMER) {
-      this.collegue.score += 100
+  onAvis(event:Avis) {
+    this.aService.donnerUnAvis(this.collegue, event).then(
+    newCollegue => {this.collegue = newCollegue}
+  )
+}
 
-    } else {
-      this.collegue.score -=100
-    }
-  }
+
 
   isLikeActive() {
     return this.collegue.score < 1000

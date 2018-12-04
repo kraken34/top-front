@@ -8,6 +8,8 @@ import { CollegueComponent } from './collegue/collegue.component';
 import { ListeCollegueComponent } from './liste-collegue/liste-collegue.component';
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { CollegueService } from './services/collegue.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { AccueilComponent } from './accueil/accueil.component';
     AccueilComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CollegueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
