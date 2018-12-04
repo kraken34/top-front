@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Collegue, Avis } from '../models';
+import { Component, Input, OnInit } from '@angular/core';
 import { ListeColleguesComponent } from '../liste-collegues/liste-collegues.component';
+import { Avis, Collegue } from '../models';
 
 @Component({
   selector: 'app-collegue',
@@ -16,7 +16,7 @@ export class CollegueComponent implements OnInit {
   }
 
   actualiserAvis(av: Avis) {
-    if (av == Avis.AIMER && (this.collegue.score >= -1000 && this.collegue.score <= 1000)) {
+    if (av == Avis.AIMER) {
       this.collegue.score += 100;
     } else {
       this.collegue.score -= 100;

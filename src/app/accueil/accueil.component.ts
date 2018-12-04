@@ -10,12 +10,13 @@ import { Collegue, Vote, Avis } from '../models';
 export class AccueilComponent implements OnInit {
 
   listeCollegues: Collegue[] = [];
-  historiqueListe: Vote[] = [];
+  voteListe: Vote[] = [];
 
   constructor(private _collegueService: CollegueService) {
   }
 
   ngOnInit() {
-    this._collegueService.listerCollegues().then(cols => this.listeCollegues = cols)
+    this._collegueService.listerCollegues()
+    .then(cols => this.listeCollegues = cols)
   }
 }
