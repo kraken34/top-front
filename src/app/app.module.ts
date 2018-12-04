@@ -11,6 +11,8 @@ import { AvisComponent } from './avis/avis.component';
 import { ListeColleguesComponent } from './liste-collegues/liste-collegues.component';
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CollegueService } from './services/collegue.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,12 @@ import { AccueilComponent } from './accueil/accueil.component';
   ],
   imports: [
     BrowserModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CollegueService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

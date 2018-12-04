@@ -1,9 +1,11 @@
+import { CollegueService } from './services/collegue.service';
+
 export class Collegue {
     pseudo: string
     score: number
     listImages: string[];
 
-    constructor(pseudo, score, images) {
+    constructor(pseudo, score, images:string[]) {
         this.pseudo = pseudo;
         this.score = score;
         this.listImages = images;
