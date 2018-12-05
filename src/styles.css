@@ -161,3 +161,14 @@ app-historique {
 .card img{
     width: 100%;
 }
+
+.card p {
+    text-align: center;
+}
+
+.pseudo{
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: auto;
+    margin: 10px 0;
+}
