@@ -18,6 +18,27 @@ h2{
 
 
 /*********************************** ANIMATION LOGO ***************************************************/
+svg{
+    max-width: 15%;
+
+}
+
+#el_0KIQ30oa7yK *{
+    animation: infinite;
+}
+
+#el_JaiqLpJmvNL{
+    fill: white;
+}
+#el_cSwiyxPTwYa {
+
+    fill: #3FFFB3;
+
+}
+
+
+
+/**
 #imgLogo{
     animation-duration: 2s;
     animation-name: animRotate;
@@ -41,7 +62,7 @@ h2{
         transform : rotateZ(25deg);
     }
 }
-
+**/
 
 
 /************************************LISTES A PUCE ****************************************************/
@@ -121,7 +142,7 @@ button a{
 
 app-liste-collegue{
     display: block;
-    width: 80%;
+    width: 100%;
 }
 
 
@@ -134,7 +155,7 @@ app-historique {
     padding: 15px;
     float: left;
     width: 20%;
-    margin: 0 1%;
+    margin: 1%;
 }
 
 .card img{

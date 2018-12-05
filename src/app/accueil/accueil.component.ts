@@ -11,6 +11,7 @@ export class AccueilComponent implements OnInit {
 
 
   tabCollegues:Collegue[]
+  tabvotes:Vote[]
 
   // Injecter mon service dans mon composant
   constructor(private cService:CollegueService) {
@@ -31,14 +32,13 @@ export class AccueilComponent implements OnInit {
     this.cService.listerCollegues().then(
       collegues => this.tabCollegues = collegues
       )
-
   }
 
 
-/*  tabVotes:Vote[] = [
-    new Vote(this.tabCollegues[0], Avis.AIMER),
-    new Vote(this.tabCollegues[1], Avis.DESTESTER),
-    new Vote(this.tabCollegues[2], Avis.AIMER)
+   tabVotes:Vote[] = [
+    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0), Avis.AIMER),
+    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0), Avis.DESTESTER),
+    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0), Avis.AIMER)
   ] 
-*/
+
 }
