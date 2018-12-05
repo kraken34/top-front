@@ -2,19 +2,28 @@ import { AvisComponent } from './avis/avis.component';
 
 export class Collegue {
     photo: string;
-    nom: string;
+    pseudo: string;
     avis: AvisComponent;
     score: number;
+    nom: string;
+    prenom: string;
+    email: string;
+    adresse: string;
 
-    constructor(photo, nom, score) {
+    constructor(photo, pseudo, score, nom, prenom, email, adresse) {
         this.photo = photo;
-        this.nom = nom;
+        this.pseudo = pseudo;
         this.score = score;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.adresse = adresse;
     }
 }
 
 export enum Avis {
-    AIMER, DETESTER
+    AIMER = 'AIMER',
+    DETESTER = 'DETESTER'
 }
 
 export class Vote {

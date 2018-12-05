@@ -3,7 +3,7 @@
 <div class="container border tour">
     <div class="row  border" *ngFor="let vote of hListe">
         <img class="col-3" src="{{vote.colleg.photo}}" width="auto" height="100px">
-        <div class="col-7">{{vote.colleg.nom}} est {{choix}}//aimé//, son score est de : {{vote.colleg.score}}</div>
+        <div class="col-7">{{vote.colleg.pseudo}} est {{choix}}//aimé//, son score est de : {{vote.colleg.score}}</div>
         <button class="btn-danger rounded col-2" (click)="suppr()">Supprimer</button>
     </div>
 </div>

@@ -17,6 +17,6 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit() {
     this._collegueService.listerCollegues()
-    .then(cols => this.listeCollegues = cols)
+      .then(cols => this.listeCollegues = cols)
   }
 }

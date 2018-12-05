@@ -1,4 +1,4 @@
 <img [src]="collegue.photo" width="auto" height="250px"><br>
-<p>{{collegue.nom}}</p>
+<a routerLink="/:pseudo">{{collegue.pseudo}}</a>
 <p>{{collegue.score}}</p>
-<app-avis (vote)="actualiserAvis($event)"></app-avis>
+<app-avis (vote)="actualiserAvis($event)" [maxA]="maxA()" [maxD]="maxD()"></app-avis>

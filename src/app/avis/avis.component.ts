@@ -1,6 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Avis } from '../models';
-import { HistoriqueVotesComponent } from '../historique-votes/historique-votes.component';
 
 @Component({
   selector: 'app-avis',
@@ -8,6 +7,9 @@ import { HistoriqueVotesComponent } from '../historique-votes/historique-votes.c
   styleUrls: ['./avis.component.css'],
 })
 export class AvisComponent implements OnInit {
+
+  @Input() maxA;
+  @Input() maxD;
 
   @Output() vote: EventEmitter<Avis> = new EventEmitter<Avis>();
   // @Output() hist: EventEmitter<> = new EventEmitter();

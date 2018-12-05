@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ListeColleguesComponent } from '../liste-collegues/liste-collegues.component';
 import { Avis, Collegue } from '../models';
+import { CollegueService } from '../services/collegue.service';
 
 @Component({
   selector: 'app-collegue',
@@ -8,21 +8,31 @@ import { Avis, Collegue } from '../models';
   styleUrls: ['./collegue.component.css'],
 })
 export class CollegueComponent implements OnInit {
-  @Input() listecol: ListeColleguesComponent
   @Input() collegue: Collegue
-  constructor() { }
+  @Input() cherch;
+  constructor(private _collegueService: CollegueService) { }
 
   ngOnInit() {
   }
 
   actualiserAvis(av: Avis) {
-    if (this.collegue.score <= 1000 || this.collegue.score >= -1000) {
-      if (av == Avis.AIMER) {
-        this.collegue.score += 100;
-      } else {
-        this.collegue.score -= 100;
-      }
-    }
+    this._collegueService.donnerUnAvis(this.collegue, av)
+      .then(col => this.collegue.score = col.score)
+    // if (this.collegue.score <= 1000 || this.collegue.score >= -1000) {
+    //   if (av == Avis.AIMER) {
+    //     this.collegue.score += 100;
+    //   } else {
+    //     this.collegue.score -= 100;
+    //   }
+    // }
+  }
+
+  maxA() {
+    return this.collegue.score < 1000;
+  }
+
+  maxD() {
+    return this.collegue.score > -1000;
   }
 }
 
