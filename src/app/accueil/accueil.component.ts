@@ -15,7 +15,6 @@ export class AccueilComponent implements OnInit {
   listVotes:Vote[];
 
   constructor(private _collegueService:CollegueService) {
-   
   }
 
   ajouterVote(unVote:Vote) {

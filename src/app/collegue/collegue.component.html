@@ -1,6 +1,8 @@
 <div class="alert alert-warning mr-auto" style="text-align:center">
   <img class="rounded mx-auto d-block" src="{{collegue.avatar}}" alt="avatar" width="100%" height="200px"/>
-  <h3>{{collegue.pseudo}}</h3>
+  <a routerLink="/collegues/{{collegue.pseudo}}">
+    <h3>{{collegue.pseudo}}</h3>
+  </a> 
   <div>{{collegue.score}}</div>
   <app-avis (eventAvis)="onAvis($event)" [disableLike]="isLiked()" [disableDislike]="isDisliked()"></app-avis>
 </div>

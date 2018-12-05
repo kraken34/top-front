@@ -10,7 +10,11 @@ import { ListeColleguesComponent } from './liste-collegues/liste-collegues.compo
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { CollegueService } from './services/collegue.service';
-import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
+import { AproposComponent } from './apropos/apropos.component';
+import { CollegueDetailsComponent } from './collegue-details/collegue-details.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,21 @@ import { HttpClientModule, HttpHeaders } from '@angular/common/http';
     CollegueComponent,
     ListeColleguesComponent,
     HistoriqueVotesComponent,
-    AccueilComponent
+    AccueilComponent,
+    MenuComponent,
+    AproposComponent,
+    CollegueDetailsComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([{ path: 'apropos',  component:AproposComponent },
+    { path: 'accueil', component:AccueilComponent},    
+    { path: 'collegues/:pseudo', component:CollegueDetailsComponent},
+    { path: '**', component:AccueilComponent}])
   ],
   providers: [CollegueService],
   bootstrap: [AppComponent]

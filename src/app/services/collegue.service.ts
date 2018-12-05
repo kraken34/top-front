@@ -27,4 +27,9 @@ export class CollegueService {
     .then((c:Collegue) => c);
   }
 
+  detailsCollegues(pseudo:string):Promise<Collegue> {
+    return this._http.get(this.URL_BACKEND.concat("/collegues/").concat(pseudo)).toPromise()
+    .then((c:Collegue) => c);
+  }
+
 }
