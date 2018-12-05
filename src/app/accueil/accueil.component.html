@@ -2,7 +2,7 @@
   <app-bandeau></app-bandeau>
   <div class="row">
     <div class="col-8">
-      <app-liste-collegues [tabCollegue]="expandable"></app-liste-collegues>
+      <app-liste-collegues (vote)="addVote($event)" [tabCollegue]="expandable"></app-liste-collegues>
     </div>
     <div class="col-4 grey lighten-2">
       <app-historique-votes [listVote]="votes"></app-historique-votes>

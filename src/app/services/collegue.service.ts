@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { Collegue, Avis } from '../models';
+import { Collegue, Avis,Vote } from '../models';
 
 
 
@@ -22,7 +22,7 @@ export class CollegueService {
       );
   }
 
-  donnerUnAvis(unCollegue: Collegue, avis: Avis): Promise<Collegue> {
+  donnerUnAvis(unCollegue: Collegue, avis: Avis): Promise<Vote> {
     const httpOptions = {
       headers: new HttpHeaders({
         "Content-Type": "application/json"
@@ -39,7 +39,7 @@ export class CollegueService {
     )
       .toPromise()
       .then((data: any) => 
-        new Collegue( data.pseudo, data.score,data.imageUrl)
+      new Vote( new Collegue (data.collegue.pseudo, data.collegue.score,data.collegue.imageUrl),(data.avis==="AIMER")?Avis.AIMER:Avis.DETESTER,data.collegue.score,data.dateVote)
       
       );
   }

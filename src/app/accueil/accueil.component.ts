@@ -9,10 +9,16 @@ import { Collegue, Vote } from '../models';
 export class AccueilComponent implements OnInit {
 
   @Input()expandable:Collegue[];
-  @Input()votes:Vote[];
+  votes:Vote[];
   constructor() { }
 
+  addVote(newVote){
+    this.votes.unshift(newVote)
+  }
+
   ngOnInit() {
+    this.votes=[];
+
   }
 
 }

@@ -17,9 +17,13 @@ export enum Avis {
 export class Vote {
     collegue: Collegue;
     avis: Avis;
+    oldScore:number;
+	dateVote:Date;
 
-    constructor(collegue, avis) {
+    constructor(collegue, avis,oldScore,date) {
         this.collegue = collegue;
         this.avis = avis;
+        this.oldScore=oldScore;
+        this.dateVote=date;
     }
 }

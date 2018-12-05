@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Collegue } from '../models';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
+import { Collegue,Vote } from '../models';
 
 @Component({
   selector: 'app-liste-collegues',
@@ -9,9 +9,12 @@ import { Collegue } from '../models';
 export class ListeColleguesComponent implements OnInit {
 
   @Input() tabCollegue:Collegue[];
+  @Output() vote:EventEmitter<Vote> = new EventEmitter<Vote>();
 
-  constructor() {
+  constructor() { }
 
+  faitPasser(event:Vote){
+    this.vote.emit(event);
   }
 
   ngOnInit() {
