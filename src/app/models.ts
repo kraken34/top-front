@@ -1,5 +1,3 @@
-import { CollegueService } from './services/collegue.service';
-
 export class Collegue {
     pseudo: string
     score: number
@@ -9,13 +7,6 @@ export class Collegue {
         this.pseudo = pseudo;
         this.score = score;
         this.listImages = images;
-    }
-    traiter(av: Avis) {
-        if (av === Avis.AIMER) {
-            this.score += 100;
-        } else {
-            this.score -= 100;
-        }
     }
 
 }

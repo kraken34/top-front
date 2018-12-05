@@ -9,5 +9,5 @@
 <!--/.Carousel Wrapper-->
 <h2 class="text-center">{{collegue.pseudo}}</h2>
 <h2 class="text-center">{{collegue.score}}</h2>
-<app-avis (change)="collegue.traiter($event)" [jaimeActif]="likeUnActive()" [destesteActif]="dislikeUnActive()"></app-avis>
+<app-avis (change)="traiter($event)" [jaimeActif]="likeUnActive()" [destesteActif]="dislikeUnActive()"></app-avis>
 

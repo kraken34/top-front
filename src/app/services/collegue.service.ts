@@ -38,13 +38,9 @@ export class CollegueService {
       httpOptions
     )
       .toPromise()
-      .then((data: any) => {
+      .then((data: any) => 
         new Collegue( data.pseudo, data.score,data.imageUrl)
-        console.log(data);
-      }, (error: any) => {
-        console.log("error", error);
-        return undefined;
-      }
+      
       );
   }
 }
