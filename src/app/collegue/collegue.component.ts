@@ -16,7 +16,7 @@ export class CollegueComponent implements OnInit {
   }
 
   actualiserAvis(av: Avis) {
-    if(this.collegue.score <= 1000 || this.collegue.score >= -1000){
+    if (this.collegue.score <= 1000 || this.collegue.score >= -1000) {
       if (av == Avis.AIMER) {
         this.collegue.score += 100;
       } else {

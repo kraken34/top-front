@@ -1,4 +1,4 @@
-<img src="{{collegue.photo}}" width="auto" height="250px"><br>
+<img [src]="collegue.photo" width="auto" height="250px"><br>
 <p>{{collegue.nom}}</p>
 <p>{{collegue.score}}</p>
 <app-avis (vote)="actualiserAvis($event)"></app-avis>

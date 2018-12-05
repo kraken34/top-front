@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { Avis, Collegue } from '../models';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { Collegue, Avis } from '../models';
 
 const URL_BACKEND = environment.backendUrl;
 
@@ -18,7 +18,9 @@ export class CollegueService {
         .map(col => new Collegue(col.photo, col.nom, col.score)))
   }
 
-  // donnerUnAvis(unCollegue: Collegue, avis: Avis): Promise<Collegue[]> {
-
-  // }
+  donnerUnAvis(unCollegue: Collegue, avis: Avis): Promise<Collegue[]> {
+    return null;
+    // return this._http.patch('http://localhost:8080/collegues').toPromise()
+    //   .then()
+  }
 }
