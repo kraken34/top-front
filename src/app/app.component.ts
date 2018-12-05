@@ -14,5 +14,6 @@ export class AppComponent {
   constructor(private pService: CollegueService) {
     this.pService.listerCollegues().then(listCollegues => this.expandable = listCollegues);
   }
+  votes:Vote[]=[new Vote(this.expandable[0],Avis.AIMER),new Vote(this.expandable[1],Avis.DETESTER)]
 
 }
