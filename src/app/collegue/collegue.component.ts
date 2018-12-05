@@ -28,11 +28,11 @@ export class CollegueComponent implements OnInit {
 
 
   isLikeActive() {
-    return this.collegue.score < 1000
+    return this.collegue.score < 100
   }
 
   isDislikeActive() {
-    return this.collegue.score > -1000
+    return this.collegue.score > -100
   }
 
 }

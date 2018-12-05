@@ -23,19 +23,22 @@ export class AccueilComponent implements OnInit {
   new Collegue('https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif', 'Gégé', 0) 
 ]; */
 
- /* tabVotes:Vote[] = [
-    new Vote(this.tabCollegues[0], Avis.AIMER),
-    new Vote(this.tabCollegues[1], Avis.DESTESTER),
-    new Vote(this.tabCollegues[2], Avis.AIMER)
-  ] 
-*/
+
+
 
   ngOnInit() {
 
     this.cService.listerCollegues().then(
       collegues => this.tabCollegues = collegues
       )
+
   }
 
 
+/*  tabVotes:Vote[] = [
+    new Vote(this.tabCollegues[0], Avis.AIMER),
+    new Vote(this.tabCollegues[1], Avis.DESTESTER),
+    new Vote(this.tabCollegues[2], Avis.AIMER)
+  ] 
+*/
 }

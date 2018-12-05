@@ -120,9 +120,7 @@ button a{
 }
 
 app-liste-collegue{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    display: block;
     width: 80%;
 }
 
@@ -135,7 +133,8 @@ app-historique {
     background-color: #ededed;
     padding: 15px;
     float: left;
-    width: 90%;
+    width: 20%;
+    margin: 0 1%;
 }
 
 .card img{
