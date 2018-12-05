@@ -14,13 +14,15 @@ import { MenuComponent } from './menu/menu.component';
 import {RouterModule, Routes} from '@angular/router';
 import { AproposComponent } from './apropos/apropos.component';
 import { FooterComponent } from './footer/footer.component';
-import { DetailsComponent } from './details/details.component'
+import { DetailsComponent } from './details/details.component';
+import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
 
 const appRoutes: Routes = [
   {path: 'accueil', component: AccueilComponent},
   {path: 'apropos', component: AproposComponent},
   {path: 'collegues/:pseudo', component: DetailsComponent},
-  { path: '',   redirectTo: '/page1', pathMatch: 'full' }
+  { path: '',   redirectTo: '/page1', pathMatch: 'full' },
+  { path: '**',  component: PageNonTrouveeComponent }
 ]
 
 @NgModule({
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     MenuComponent,
     AproposComponent,
     FooterComponent,
-    DetailsComponent
+    DetailsComponent,
+    PageNonTrouveeComponent
   ],
   imports: [
     BrowserModule,
