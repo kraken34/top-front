@@ -25,7 +25,7 @@ export class CollegueService {
   }
 
   donnerUnAvis(unCollegue: Collegue, avis: Avis): Promise<Collegue> {
-    return this._http.patch(URL_BACKEND + '/collegues', {"action": avis.toString}, httpOptions)
+    return this._http.patch(URL_BACKEND + '/collegues/'+ unCollegue.nom, {"action": avis.toString}, httpOptions)
     .toPromise().then((c: Collegue) => c)
   }
 }
