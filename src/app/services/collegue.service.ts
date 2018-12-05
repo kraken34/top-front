@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import { Collegue, Avis } from '../models';
 
 const URL_BACKEND = environment.backendUrl;
@@ -13,7 +13,8 @@ export class CollegueService {
   constructor(private _http: HttpClient) { }
 
   listerCollegues(): Promise<Collegue[]> {
-    return this._http.get('http://localhost:8080/collegues').toPromise()
+    //http://localhost:8080
+    return this._http.get('/collegues').toPromise()
       .then((tabCol: any[]) => tabCol
         .map(col => new Collegue(col.photo, col.nom, col.score)))
   }
