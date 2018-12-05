@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Vote } from '../models';
+import { Vote, Avis } from '../models';
+import { truncate } from 'fs';
 
 @Component({
   selector: 'app-historique-votes',
@@ -15,6 +16,22 @@ export class HistoriqueVotesComponent implements OnInit {
 
   supprimer(vote:Vote) {
     this.votes.splice(this.votes.findIndex(v=> v === vote), 1);
+  }
+
+  avisAimer(vote:Vote):Boolean {
+    if(vote.avis === Avis.AIMER) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  avisDetester(vote:Vote):Boolean {
+    if(vote.avis === Avis.DETESTER) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   ngOnInit() {

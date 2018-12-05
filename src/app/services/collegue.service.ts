@@ -16,12 +16,14 @@ export class CollegueService {
     // récupérer la liste des collègues côté serveur
     return this._http.get(this.URL_BACKEND.concat("/collegues")).toPromise()
     .then((collegues:any[]) => collegues.map(c => new Collegue(c.pseudo, c.avatar, c.score)));
+    
   }
 
   donnerUnAvis(unCollegue:Collegue, avis:Avis):Promise<Collegue>  {
     // Aimer ou Détester un collègue côté serveur
     return this._http.patch(this.URL_BACKEND.concat("/collegues/").concat(unCollegue.pseudo),
-     {"action":avis.toString()},{headers: new HttpHeaders({"Content-Type": "application/json"})}).toPromise()
+     {"action":avis.toString()},
+     {headers: new HttpHeaders({"Content-Type": "application/json"})}).toPromise()
     .then((c:Collegue) => c);
   }
 

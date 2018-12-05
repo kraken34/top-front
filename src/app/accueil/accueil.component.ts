@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Collegue, Vote } from '../models';
 import { CollegueService } from '../services/collegue.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-accueil',
@@ -17,7 +18,7 @@ export class AccueilComponent implements OnInit {
    
   }
 
-  onVote(unVote:Vote) {
+  ajouterVote(unVote:Vote) {
     //Ajouter un vote dans l'historique
     this.listVotes.unshift(unVote);
   }
@@ -30,7 +31,10 @@ export class AccueilComponent implements OnInit {
     this.onRefrech();
     this.title = 'top-collegues-front';
     this._collegueService.listerCollegues()
-    .then( c => this.listCollegues = c); 
+    .then( c => this.listCollegues = c)
+    .catch((error: HttpErrorResponse) => {
+      console.error(`Error on service collegue : ${error.message}`)
+    });; 
   }
 
 }

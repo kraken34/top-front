@@ -20,7 +20,6 @@ export class CollegueComponent implements OnInit {
   }
 
   onAvis(avis:Avis) {
-    
     this._collegueService.donnerUnAvis(this.collegue, avis).then(c => this.collegue.score = c.score);
     this.eventVote.emit(new Vote(this.collegue, avis))
   }

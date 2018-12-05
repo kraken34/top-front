@@ -8,7 +8,7 @@
 <button type="button" class="col 12 btn btn-warning" (click)="onRefrech()">Rafraichir la liste</button>
 <div class="container-fluid d-flex">
   <div class="container col-10">
-    <app-liste-collegues class="row" [collegues]="listCollegues" (eventVote)="onVote($event)"></app-liste-collegues>
+    <app-liste-collegues class="row" [collegues]="listCollegues" (eventVote)="ajouterVote($event)"></app-liste-collegues>
   </div>
   <div class="container col-2">
     <app-historique-votes class="row" [votes]="listVotes"></app-historique-votes>

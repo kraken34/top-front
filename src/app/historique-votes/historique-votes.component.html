@@ -1,8 +1,8 @@
 <div class="alert alert-primary">Historique</div>
-<div *ngFor="let v of votes">
-  <p class="alert alert-primary">
+<ng-container *ngFor="let v of votes">
+  <div [ngClass]="{'alert alert-primary ': avisAimer(v), 'alert alert-danger p-0 m-0': avisDetester(v)}">
       <img class="rounded" width="20%" height="50px" src="{{v.cible.avatar}}" />
       {{v.toString()}}    
       <button class="btn btn-outline-primary" (click)="supprimer(v)">Supprimer</button>
-  </p>
-</div>
+  </div>
+</ng-container>
