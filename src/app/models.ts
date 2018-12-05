@@ -9,16 +9,8 @@ export class Collegue {
         this.score = score
     }
 
-    misAvis(event:Avis){
-        if(event==Avis.AIMER){
-            this.score+=10;
-        }else{
-            this.score-=10;
-        }
-    }
-
 }
-export enum Avis {AIMER = "aimé",DESTESTER="détesté"};
+export enum Avis {AIMER,DESTESTER};
 
 export class Vote{
     personne: Collegue;
