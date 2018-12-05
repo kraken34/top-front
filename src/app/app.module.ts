@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   {path: 'accueil', component: AccueilComponent},
   {path: 'apropos', component: AproposComponent},
   {path: 'collegues/:pseudo', component: DetailsComponent},
-  { path: '',   redirectTo: '/accueil', pathMatch: 'full' },
+  { path: '',   redirectTo: 'accueil', pathMatch: 'full' },
   { path: '**',  component: PageNonTrouveeComponent }
 ]
 
