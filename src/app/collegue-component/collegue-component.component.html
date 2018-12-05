@@ -1,4 +1,5 @@
-<div><img src="{{collegue.photo}}" width="250px" height="250px">
+<div><img src="{{collegue.imageUrl}}" width="250px" height="250px">
+  <h3><a routerLink="/collegues/{{collegue.pseudo}}">{{collegue.pseudo}}</a></h3>
   <h3>{{collegue.score}}</h3>
   <app-avis-component (eventLike)="onAvis($event)"></app-avis-component>
 </div>

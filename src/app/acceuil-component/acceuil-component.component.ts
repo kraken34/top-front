@@ -20,7 +20,7 @@ export class AcceuilComponentComponent implements OnInit {
     this._colSrv.listerCollegues()
       .then(tab => this.tabCollegue = tab)
       .catch((error: HttpErrorResponse) => {
-        console.error("Collegue indisponible :  $(error.message)")
+        console.error("Collegue indisponible")
       });
   }
   

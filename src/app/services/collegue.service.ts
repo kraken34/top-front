@@ -14,7 +14,7 @@ export class CollegueService {
 
   listerCollegues():Promise<Collegue[]>  {
     // récupérer la liste des collègues côté serveur
-     return this._http.get('http://localhost:8080/collegues').toPromise().then((tabColServeur:any[]) => tabColServeur.map(c => new Collegue(c.imageUrl, c.pseudo, c.score)));
+     return this._http.get('http://localhost:8080/collegues').toPromise().then((tabColServeur:any[]) => tabColServeur.map(c => new Collegue( c.pseudo,c.imageUrl, c.score, c.nom, c.prenom, c.mail, c.adresse)));
   }
 
   donnerUnAvis(unCollegue:Collegue, avis:Avis):Promise<Collegue>  {
@@ -23,4 +23,7 @@ export class CollegueService {
     {headers: new HttpHeaders({ "Content-Type": "application/json"})}).toPromise().then((c:Collegue)=>c);
   }
   
+  listerUnCollegue(pseudo:string):Promise<Collegue>{
+    return this._http.get(this.URL_BACKEND.concat("/collegues/").concat(pseudo)).toPromise().then((c:Collegue)=>c);
+  }
 }

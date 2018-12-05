@@ -1,12 +1,21 @@
 export class Collegue {
     pseudo: string;
     score: number;
-    photo: string;
+    imageUrl: string;
+    nom:string;
+    prenom:string;
+    mail:string;
+    adresse:string;
 
-    constructor(photo:string, pseudo:string, score:number) {
-        this.photo = photo
-        this.pseudo = pseudo
-        this.score = score
+
+    constructor(pseudo:string,imageUrl:string, score:number, nom:string, prenom:string, mail:string, adresse:string) {
+        this.pseudo = pseudo;
+		this.imageUrl = imageUrl;
+		this.score = score;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.mail = mail;
+		this.adresse = adresse;
     }
 
 }

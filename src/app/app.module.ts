@@ -10,6 +10,18 @@ import { HistoriqueVotesComponentComponent } from './historique-votes-component/
 import { AcceuilComponentComponent } from './acceuil-component/acceuil-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CollegueService } from './services/collegue.service';
+import { MenuComponent } from './menu/menu.component';
+import { RouterModule, Routes } from '@angular/router';
+import {AproposComponent} from './apropos/apropos.component';
+import { PageDetailsComponent } from './page-details/page-details.component';
+
+
+const appRoutes : Routes = [
+  {path:'acceuil', component: AcceuilComponentComponent},
+  {path:'apropos', component: AproposComponent},
+  {path: 'collegues/:pseudo', component: PageDetailsComponent}
+]
+
 
 @NgModule({
   declarations: [
@@ -19,11 +31,16 @@ import { CollegueService } from './services/collegue.service';
     CollegueComponentComponent,
     ListeColleguesComponentComponent,
     HistoriqueVotesComponentComponent,
-    AcceuilComponentComponent
+    AcceuilComponentComponent,
+    MenuComponent,
+    AproposComponent,
+    PageDetailsComponent
+   
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [CollegueService],
   bootstrap: [AppComponent]
