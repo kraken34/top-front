@@ -67,4 +67,13 @@ export class CollegueService {
                     // });
 
   }
+
+
+  getCollegueByNom(collegueName:string):Promise<Collegue>{
+
+    return this._http.get(URL_BACKEND.concat("/collegues/").concat(collegueName))
+                      .toPromise()
+                      .then((c:Collegue) => c)
+  }
+
 }

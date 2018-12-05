@@ -19,6 +19,15 @@ export class Collegue {
     // }
 }
 
+export class CollegueAcDetails extends Collegue{
+    email: string;
+
+    constructor(nom: string, score: number, lienPhoto: string, email:string) {
+        super(nom, score, lienPhoto);
+        this.email=email;
+    }
+}
+
 export enum Avis { AIMER = 'AIMER', DETESTER = 'DETESTER' };
 
 export class Vote {

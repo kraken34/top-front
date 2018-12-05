@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, } from '@angular/core';
 import {Collegue, Avis, Vote} from '../models';
 import { CollegueService } from '../services/collegue.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-collegue-component',
@@ -13,7 +14,7 @@ export class CollegueComponentComponent implements OnInit {
 
   @Output() actionVote:EventEmitter<Vote> = new EventEmitter<Vote>();
 
-  constructor(private _collegueService:CollegueService) { }
+  constructor(protected _collegueService:CollegueService, protected _router:Router) { }
 
   ngOnInit() {
   }
@@ -26,6 +27,10 @@ export class CollegueComponentComponent implements OnInit {
               })
     .catch(err => console.log('erreur lors de l\'avis',err));
  
+  }
+
+  voirDetails():void{
+    this._router.navigate(['/collegues/'.concat(this.collegue.nom)]);
   }
 
 }
