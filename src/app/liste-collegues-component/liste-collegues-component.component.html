@@ -1,5 +1,5 @@
 <div *ngFor= "let col of collegues">
   
-    <app-collegue-component [collegue]="col"></app-collegue-component>
+    <app-collegue-component (eventVote)="onEventVote($event)" [collegue]="col"></app-collegue-component>
 
 </div>

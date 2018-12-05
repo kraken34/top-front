@@ -9,6 +9,7 @@ import { ListeColleguesComponentComponent } from './liste-collegues-component/li
 import { HistoriqueVotesComponentComponent } from './historique-votes-component/historique-votes-component.component';
 import { AcceuilComponentComponent } from './acceuil-component/acceuil-component.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CollegueService } from './services/collegue.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CollegueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
