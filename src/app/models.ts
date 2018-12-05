@@ -1,11 +1,12 @@
 export class Collegue {
 
     nom: string;
-    score: number = 0;
+    score: number;
     lienPhoto: string;
 
-    constructor(nom: string, lienPhoto: string) {
+    constructor(nom: string, score: number, lienPhoto: string) {
         this.nom = nom;
+        this.score =score;
         this.lienPhoto = lienPhoto;
     }
 
