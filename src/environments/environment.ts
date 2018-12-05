@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendUrl: 'http://florian-top-collegues.herokuapp.com/'
+  backendUrl: 'http://localhost:8080/'
 };
 
 /*
