@@ -22,10 +22,10 @@ export class HistoriqueVotesComponent implements OnInit {
   addVote(collegue: Collegue, avis: Avis) { this.listeVote.push(new Vote(collegue, avis)) }
 
   ngOnInit() {
-    this.listeVote.push(new Vote(new Collegue("https://media3.giphy.com/media/MxRkVKrBvfzMY/200.gif?cid=3640f6095c054dfa41536a57591da7bd", "col1", 50), Avis.AIMER))
-    this.listeVote.push(new Vote(new Collegue("https://media1.giphy.com/media/xe9csf50g4SqY/200.gif?cid=3640f6095c052ae5315077353248ff7b", "col2", 50), Avis.AIMER))
-    this.listeVote.push(new Vote(new Collegue("https://media1.giphy.com/media/Ja8ihKn1B3sA/200w.gif?cid=3640f6095c05262b494e73684d6320e6", "col3", 50), Avis.DETESTER))
-    this.listeVote.push(new Vote(new Collegue("https://media1.giphy.com/media/fQQbWnU2g5OcU/200w.gif?cid=3640f6095c052a595a5379624d220236", "col4", 50), Avis.AIMER))
-    this.listeVote.push(new Vote(new Collegue("https://media3.giphy.com/media/Pjs1kqtH1KTaU/200w.gif?cid=3640f6095c052ae5315077353248ff7b", "col5", 50), Avis.AIMER))
+    this.listeVote.push(new Vote(new Collegue("Nom", "Prénom", "pseudo", "m@il", "adresse", 0, "https://media3.giphy.com/media/MxRkVKrBvfzMY/200.gif?cid=3640f6095c054dfa41536a57591da7bd"), Avis.AIMER))
+    this.listeVote.push(new Vote(new Collegue("Nom", "Prénom", "pseudo", "m@il", "adresse", 0, "https://media1.giphy.com/media/xe9csf50g4SqY/200.gif?cid=3640f6095c052ae5315077353248ff7b"), Avis.AIMER))
+    this.listeVote.push(new Vote(new Collegue("Nom", "Prénom", "pseudo", "m@il", "adresse", 0, "https://media1.giphy.com/media/Ja8ihKn1B3sA/200w.gif?cid=3640f6095c05262b494e73684d6320e6"), Avis.DETESTER))
+    this.listeVote.push(new Vote(new Collegue("Nom", "Prénom", "pseudo", "m@il", "adresse", 0, "https://media1.giphy.com/media/fQQbWnU2g5OcU/200w.gif?cid=3640f6095c052a595a5379624d220236"), Avis.AIMER))
+    this.listeVote.push(new Vote(new Collegue("Nom", "Prénom", "pseudo", "m@il", "adresse", 0, "https://media3.giphy.com/media/Pjs1kqtH1KTaU/200w.gif?cid=3640f6095c052ae5315077353248ff7b"), Avis.AIMER))
   }
 }

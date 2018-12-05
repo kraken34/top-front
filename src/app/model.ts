@@ -1,14 +1,23 @@
 export class Collegue {
 
-    photo: string
+    nom: string
+    prenom: string
     pseudo: string
+    email: string
+    adresse: string
     score: number
+    photo: string
 
-    constructor(photo: string, pseudo: string, score: number) {
-        this.photo = photo
-        this.pseudo = pseudo
-        this.score = score
+    constructor(nom?: string, prenom?: string, pseudo?: string, email?: string, adresse?: string, score?: number, photo?: string) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.pseudo = pseudo;
+        this.email = email;
+        this.adresse = adresse;
+        this.score = score;
+        this.photo = photo;
     }
+
 }
 
 export enum Avis { AIMER, DETESTER }
