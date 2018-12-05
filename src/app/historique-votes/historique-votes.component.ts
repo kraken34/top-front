@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Vote, Avis } from '../models';
-import { truncate } from 'fs';
 
 @Component({
   selector: 'app-historique-votes',
