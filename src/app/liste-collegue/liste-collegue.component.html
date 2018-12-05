@@ -1,6 +1,9 @@
 <button (click)="refresh()">Rafraichir</button>
-<div class="row">
+<div *ngIf=error>
+    <p>Une erreur coquine est survenue inopinément...</p>
+</div>
+<div class="row" *ngIf=!error>
     <div class="col-3" *ngFor="let item of collegues">
-        <app-collegue [collegue]=item></app-collegue>
+        <app-collegue [collegue]=item (backError)="error=true"></app-collegue>
     </div>
 </div>

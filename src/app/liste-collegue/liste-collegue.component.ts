@@ -11,11 +11,12 @@ import { CollegueService } from '../services/collegue.service';
 export class ListeCollegueComponent implements OnInit {
 
   collegues: Collegue[] = []
+  error: boolean
 
   constructor(private cService: CollegueService) { }
 
   refresh() {
-    this.cService.listerCollegues().then(colleguesList => this.collegues = colleguesList)
+    this.cService.listerCollegues().then(colleguesList => { this.collegues = colleguesList; this.error = false }).catch(err => this.error = true)
   }
 
   ngOnInit() {
