@@ -2,10 +2,17 @@ export class Collegue {
     lienPhoto:string;
     pseudo:string;
     score:number;
-    constructor(lienPhoto:string, pseudo:string, score:number) {
+    nom:string;
+    prenom:string;
+    email:string;
+
+    constructor(lienPhoto:string, pseudo:string, score:number, nom:string, prenom:string, email:string) {
         this.lienPhoto = lienPhoto;
         this.pseudo = pseudo;
         this.score = score;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
     }
 }
 

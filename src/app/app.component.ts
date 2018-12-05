@@ -10,10 +10,9 @@ import { CollegueService } from './services/collegue.service';
 })
 export class AppComponent {
 
-  collegueTab:Collegue[] = [];
 
   // Injection du service
-  constructor(private cService:CollegueService) {
+  constructor() {
 
   }
   
@@ -34,9 +33,6 @@ export class AppComponent {
   
   
   ngOnInit() {
-    this.cService.listerCollegues().then(
-      collegues => this.collegueTab = collegues
-    )
   }
 
 }

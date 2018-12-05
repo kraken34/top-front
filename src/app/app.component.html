@@ -1,16 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center" class="border border-primary">
-  <app-bandeau-component></app-bandeau-component>
+    <app-bandeau-component></app-bandeau-component>
 </div>
-<div id="collegue-items" style="text-align:center">
-
-  
-  <app-liste-collegues-component [collegues]="collegueTab"></app-liste-collegues-component>
-
-</div>
-
+<app-menu></app-menu>
 <div>
-    <!-- <app-historique-votes [votes]="votesTab"></app-historique-votes> -->
+  <router-outlet></router-outlet> 
 </div>
 
 
