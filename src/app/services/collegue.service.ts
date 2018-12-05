@@ -3,8 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Collegue, Avis } from '../model';
 import { environment } from 'src/environments/environment';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
