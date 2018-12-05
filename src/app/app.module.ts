@@ -18,10 +18,13 @@ import { AproposComponent } from './apropos/apropos.component';
 import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
 import { MenuComponent } from './menu/menu.component';
 import { CollegueDetailComponent } from './collegue-detail/collegue-detail.component';
+import { CollegueFull } from './models';
 
 const appRoutes: Routes = [
 
   { path: 'accueil', component: AccueilComponent }, // /page1 affiche le composant A
+
+  { path: 'collegue/:pseudo', component: CollegueDetailComponent },
 
   { path: 'apropos', component: AproposComponent }, // /page2 affiche le composant B
 

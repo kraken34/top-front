@@ -12,7 +12,7 @@ export class CollegueComponent implements OnInit {
   @Input() collegue: Collegue;
   @Output() vote: EventEmitter<Vote> = new EventEmitter<Vote>();
 
-  constructor(private pService: CollegueService) { }
+  constructor(protected pService: CollegueService) { }
 
   likeUnActive() {
     return this.collegue.score >= 1000;
