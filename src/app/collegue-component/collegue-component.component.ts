@@ -20,10 +20,11 @@ export class CollegueComponentComponent implements OnInit {
 
   incrementScore(avis:Avis){
     //this.collegue.incrementScore(avis);
-    this._collegueService.donnerUnAvis(this.collegue,avis).then(c =>{
-      this.collegue.score = c.score
-      this.actionVote.emit(new Vote(this.collegue,avis))
-    }  ) .catch(err => console.log('erreur lors de l\'avis',err));
+    this._collegueService.donnerUnAvis(this.collegue,avis)
+    .then(c =>{this.collegue.score = c.score;
+              this.actionVote.emit(new Vote(this.collegue,avis))
+              })
+    .catch(err => console.log('erreur lors de l\'avis',err));
  
   }
 
