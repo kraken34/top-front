@@ -18,9 +18,8 @@ export class CollegueService {
         .map(col => new Collegue(col.photo, col.nom, col.score)))
   }
 
-  donnerUnAvis(unCollegue: Collegue, avis: Avis): Promise<Collegue[]> {
-    return null;
-    // return this._http.patch('http://localhost:8080/collegues').toPromise()
-    //   .then()
-  }
+  // donnerUnAvis(unCollegue: Collegue, avis: Avis): Promise<Collegue[]> {
+  //   return this._http.patch('http://localhost:8080/collegues').toPromise()
+  //     .then()
+  // }
 }
