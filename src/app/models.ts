@@ -23,10 +23,10 @@ export class Vote{
 
     AvisNbPoints(){
         if(this.personne.score >=100){
-           return this.personne.pseudo+" est "+Avis.AIMER+" avec un score de "+this.personne.score;
+           return this.personne.pseudo+" est adoré(e) avec un score de "+this.personne.score;
             
         }else{
-           return this.personne.pseudo+" est "+Avis.DESTESTER+" avec un score de "+this.personne.score;
+           return this.personne.pseudo+" est detesté(e) avec un score de "+this.personne.score;
         }
     }
 
