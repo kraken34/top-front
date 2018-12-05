@@ -36,9 +36,9 @@ export class AccueilComponent implements OnInit {
 
 
    tabVotes:Vote[] = [
-    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0), Avis.AIMER),
-    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0), Avis.DESTESTER),
-    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0), Avis.AIMER)
+    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0, "Bébert", "Gérard", "gegedu33@gmail.com", "27, rue des écus, 33110 Le Bouscat"), Avis.AIMER),
+    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0, "Bébert", "Gérard", "gegedu33@gmail.com", "27, rue des écus, 33110 Le Bouscat"), Avis.DESTESTER),
+    new Vote(new Collegue("https://media.giphy.com/media/M7oKkaur56EFO/giphy.gif", "Gigi", 0, "Bébert", "Gérard", "gegedu33@gmail.com", "27, rue des écus, 33110 Le Bouscat"), Avis.AIMER)
   ] 
 
 }

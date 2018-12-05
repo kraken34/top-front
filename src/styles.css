@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
 /************************************* TITRES *********************************************************/
 h1, h2{
     font-family: "Roboto";
@@ -11,16 +17,51 @@ p{
     font-family: "Roboto";
 }
 
+h1{
+    margin-bottom: 50px;
+}
+
 h2{
     margin-bottom: 70px;
     font-weight: 300;
 }
 
+/************************************** MENU *****************************************************/
+nav{
+    background-color: #3FFFB3;
+    padding: 20px 0px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav a{
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 22px;
+    font-family: "Arial";
+}
+
+
+nav .active-link{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 
 /*********************************** ANIMATION LOGO ***************************************************/
-svg{
+app-menu svg{
     max-width: 15%;
+}
 
+#svgAnim{
+    text-align: center;
 }
 
 #el_0KIQ30oa7yK *{
@@ -31,9 +72,7 @@ svg{
     fill: white;
 }
 #el_cSwiyxPTwYa {
-
     fill: #3FFFB3;
-
 }
 
 
@@ -112,6 +151,9 @@ button a{
     font-family: "Roboto";
     color: white;
 }
+button.disabled{
+    background-color: red;
+}
 
 
 
@@ -164,11 +206,74 @@ app-historique {
 
 .card p {
     text-align: center;
+    margin: 10px 0;
 }
 
 .pseudo{
     text-transform: uppercase;
     font-weight: 700;
     line-height: auto;
-    margin: 10px 0;
+}
+
+/******************************************************** IMG & TXT ***************************************************************/
+app-apropos{
+    display: flex;
+    flex-direction: column;
+}
+
+app-apropos img{
+    object-fit: contain;
+}
+
+.desc{
+    width: 35%;
+    margin: auto;
+    margin-top: 50px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+/******************************************************** FOOTER ************************************************************/
+.footer{
+    background-color: #3FFFB3;
+    padding: 15px 0px;
+}
+
+.footer p{
+    text-align: center;
+}
+
+
+
+.disabled{
+    background-color: white;
+}
+
+
+/********************************************************* DETAIL OF COLLEAGUE ***********************************************************/
+app-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    flex-direction: column;
+}
+
+.cardDetail{
+    background-color: #3FFFB3;
+    padding: 15px;
+    text-align: center;
+}
+
+.cardDetail img{
+    margin-bottom: 15px;
+}
+
+.description{
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.card a{
+    color: #15BC7A;
 }
