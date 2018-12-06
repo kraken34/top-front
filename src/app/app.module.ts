@@ -13,13 +13,14 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AproposComponent } from './apropos/apropos.component';
 import { DetailComponent } from './detail/detail.component';
+import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'a-propos', component: AproposComponent },
   { path: 'collegues/:id', component: DetailComponent },
-  { path: '', redirectTo: '/accueil', pathMatch: 'full' }
-
+  { path: '', redirectTo: '/accueil', pathMatch: 'full' },
+  { path: '**', component: PageNonTrouveeComponent }
 ];
 
 @NgModule({
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     HistoriqueVotesComponent,
     AccueilComponent,
     MenuComponent,
-    DetailComponent
+    DetailComponent,
+    PageNonTrouveeComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,6 @@ export class DetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private collegueService: CollegueService) {
     this.id = route.snapshot.paramMap.get("id")
-    //this.collegue = 
     collegueService.getCollegue(this.id).then(collegueRecup => this.collegue = collegueRecup)
   }
 

@@ -1,1 +1,2 @@
-div {display: flex;flex-direction: column;    justify-content: center;width: 15%;    margin: auto;}
+div {display: flex;flex-direction: column;justify-content: center;width: 15%;margin: auto;}
+p{color: darkslateblue;font-size: 45px;margin: 0;}
