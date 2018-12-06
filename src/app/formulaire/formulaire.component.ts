@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 
 export class FormulaireComponent implements OnInit {
 
-  errorMatricule: boolean=false
+  errorMatricule: boolean = false
 
   matricule: string
   pseudo: string
