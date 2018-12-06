@@ -27,4 +27,8 @@ export class CollegueService {
     return this._http.get(environment.backendUrl + "collegues/" + pseudo).toPromise()
       .then((collegue: any) => new Collegue(collegue.nom, collegue.prenom, collegue.pseudo, collegue.email, collegue.adresse, collegue.score, collegue.photo))
   }
+
+  exists(matricule: string, pseudo: string, photo: string): Promise<any> {
+    return this._http.post(environment.backendUrl + "collegues", { matricule, pseudo, photo }, { observe: "response" }).toPromise()
+  }
 }

@@ -17,7 +17,6 @@ export class Collegue {
         this.score = score;
         this.photo = photo;
     }
-
 }
 
 export enum Avis { AIMER, DETESTER }

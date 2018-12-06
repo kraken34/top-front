@@ -14,10 +14,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AproposComponent } from './apropos/apropos.component';
 import { DetailComponent } from './detail/detail.component';
 import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { FormsModule }   from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'a-propos', component: AproposComponent },
+  { path: 'nouveau', component: FormulaireComponent },
   { path: 'collegues/:id', component: DetailComponent },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   { path: '**', component: PageNonTrouveeComponent }
@@ -35,12 +38,14 @@ const appRoutes: Routes = [
     AccueilComponent,
     MenuComponent,
     DetailComponent,
-    PageNonTrouveeComponent
+    PageNonTrouveeComponent,
+    FormulaireComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

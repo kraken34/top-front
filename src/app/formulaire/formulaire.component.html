@@ -1,0 +1,8 @@
+<form (ngSubmit)="submit()" #monForm="ngForm">
+  <label>Ton petit matricule : </label><input name="matricule" [(ngModel)]="matricule" #matriculeChamp="ngModel" required><br>
+  <label>Ton nom de coquine : </label><input name="pseudo" [(ngModel)]="pseudo" #pseudoChamp="ngModel" required minlength="2"><br>
+  <label>Une photo cochonne : </label><input name="photo" [(ngModel)]="photo" #photoChamp="ngModel"><br>
+  <button type="submit" *ngIf=pseudoChamp.valid&&matriculeChamp.valid>Ajouter</button>
+</form>
+<p *ngIf=pseudoChamp.invalid&&pseudoChamp.dirty>Au moins 2 caractères pour le pseudo !</p>
+<p *ngIf=errorMatricule>Le matricule demandé n'existe pas, cagole !</p>
