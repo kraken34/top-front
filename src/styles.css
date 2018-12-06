@@ -277,3 +277,15 @@ app-details{
 .card a{
     color: #15BC7A;
 }
+
+/***************************************************** BLOC HISTORIQUE ********************************************************/
+.blocVote{
+    margin: 1% 0;
+}
+
+.enteteHistorique{
+    text-align: center;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    background-color: #3FFFB3;
+}
