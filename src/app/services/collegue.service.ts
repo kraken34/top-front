@@ -36,4 +36,10 @@ export class CollegueService {
       .then((collegue:any) => new Collegue(collegue.photo, collegue.pseudo, collegue.score, collegue.nom, collegue.prenom, collegue.email, collegue.adresse))
   }
 
+
+  // Send form
+  exists(matricule:string, pseudo:string, photo: string):Promise<any> {
+    return this._http.post(environment.backendUrl + "collegues/", {matricule, pseudo, photo}, {observe: "response"}).toPromise()
+  }
+
 }

@@ -16,10 +16,13 @@ import { AproposComponent } from './apropos/apropos.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailsComponent } from './details/details.component';
 import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
+import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: 'accueil', component: AccueilComponent},
   {path: 'apropos', component: AproposComponent},
+  {path: 'ajouteruncollegue', component: AjouterUnCollegueComponent},
   {path: 'collegues/:pseudo', component: DetailsComponent},
   { path: '',   redirectTo: 'accueil', pathMatch: 'full' },
   { path: '**',  component: PageNonTrouveeComponent }
@@ -38,12 +41,14 @@ const appRoutes: Routes = [
     AproposComponent,
     FooterComponent,
     DetailsComponent,
-    PageNonTrouveeComponent
+    PageNonTrouveeComponent,
+    AjouterUnCollegueComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [CollegueService],
   bootstrap: [AppComponent]

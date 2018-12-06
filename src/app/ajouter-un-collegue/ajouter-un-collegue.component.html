@@ -1,0 +1,14 @@
+<h1>Ajouter un collègue</h1>
+
+<form (ngSubmit)="submit()" #AjouterUnCollegue="ngForm" class="formCollegue">
+ 
+  <input [(ngModel)]="matricule" #champ1="ngModel" required placeholder="Matricule" name="matricule" class="champRequis">
+  <p *ngIf="champ1.invalid" class="champInvalid">Le matricule doit être existant</p>
+  <p *ngIf="errorMatricule" class="champInvalid">Ce matricule n'existe pas</p>
+  <input [(ngModel)]="pseudo" #champ2="ngModel" required minlength="2" placeholder="Pseudo" name="pseudo" class="champRequis">
+  <p *ngIf="champ2.invalid" class="champInvalid">Le pseudo doit contenir au moins 2 caractères</p>
+
+  <input [(ngModel)]="photo" #champ3="ngModel" placeholder="Photo" name="photo">
+  <button type="submit" *ngIf="champ1.valid&&champ2.valid">Ajouter</button>
+
+</form>
