@@ -1,0 +1,12 @@
+<div>
+  <h1>Ajouter un collegue</h1>
+  <form (ngSubmit)="submit(monForm.value)">
+    <label>Matricule</label>
+    <input [(ngModel)]="monForm.matricule"  name="matricule" minlength="2">
+    <label>Pseudo</label>
+    <input [(ngModel)]="monForm.pseudo" name="pseudo" required>
+    <label>Photo</label>
+    <input [ngModel]="monForm.imageUrl" name="imageUrl">
+      <button type="submit" [disabled]="monForm.invalid">Submit</button>
+  </form>
+</div>

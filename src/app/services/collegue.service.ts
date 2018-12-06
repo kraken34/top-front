@@ -28,4 +28,8 @@ export class CollegueService {
   listerUnCollegue(pseudo:string):Promise<Collegue>{
     return this._http.get(this.URL_BACKEND.concat("/collegues/").concat(pseudo)).toPromise().then((c:Collegue)=>c);
   }
+
+  ajouterUnCollegue():Promise<Collegue>{
+    return
+  }
 }

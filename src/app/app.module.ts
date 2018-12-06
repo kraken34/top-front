@@ -14,12 +14,16 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import {AproposComponent} from './apropos/apropos.component';
 import { PageDetailsComponent } from './page-details/page-details.component';
-
+import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
+import { FormsModule }   from '@angular/forms';
 
 const appRoutes : Routes = [
   {path:'acceuil', component: AcceuilComponentComponent},
   {path:'apropos', component: AproposComponent},
+
+  {path:'collegues/nouveau', component: AjouterUnCollegueComponent},
   {path: 'collegues/:pseudo', component: PageDetailsComponent}
+
 ]
 
 
@@ -34,13 +38,15 @@ const appRoutes : Routes = [
     AcceuilComponentComponent,
     MenuComponent,
     AproposComponent,
-    PageDetailsComponent
+    PageDetailsComponent,
+    AjouterUnCollegueComponent
    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [CollegueService],
   bootstrap: [AppComponent]

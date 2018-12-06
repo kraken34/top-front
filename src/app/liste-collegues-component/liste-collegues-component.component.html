@@ -1,3 +1,4 @@
+<button routerLink="/collegues/nouveau">Nouveau</button>
 <div *ngFor= "let col of collegues">
   
     <app-collegue-component (eventVote)="onEventVote($event)" [collegue]="col"></app-collegue-component>

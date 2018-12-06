@@ -18,7 +18,7 @@ collegue:Collegue = new Collegue('', '', 0, '', '', '', '')
  
     ngOnInit() {
       this.detailCollegue.listerUnCollegue(this.pseudo)
-      .then(col => this.collegue = col)
+      .then(collegue => this.collegue = collegue)
     }
 
   onAvis(avis:Avis){
