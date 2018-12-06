@@ -11,7 +11,7 @@ export class PageDetailsComponent implements OnInit {
 
 @Output()  eventVote:EventEmitter<Vote> = new EventEmitter<Vote>();
 pseudo:string;
-collegue:Collegue
+collegue:Collegue = new Collegue('', '', 0, '', '', '', '')
     constructor(private detailCollegue:CollegueService ,private route:ActivatedRoute) { 
       this.pseudo= route.snapshot.paramMap.get("pseudo")
     }
