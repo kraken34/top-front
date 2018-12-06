@@ -14,7 +14,7 @@ export class CollegueService {
 
   listerCollegues():Promise<Collegue[]>  {
     // récupérer la liste des collègues côté serveur
-     return this._http.get('http://localhost:8080/collegues').toPromise().then((tabColServeur:any[]) => tabColServeur.map(c => new Collegue( c.pseudo,c.imageUrl, c.score, c.nom, c.prenom, c.mail, c.adresse)));
+     return this._http.get(this.URL_BACKEND).toPromise().then((tabColServeur:any[]) => tabColServeur.map(c => new Collegue( c.pseudo,c.imageUrl, c.score, c.nom, c.prenom, c.mail, c.adresse)));
   }
 
   donnerUnAvis(unCollegue:Collegue, avis:Avis):Promise<Collegue>  {
