@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CollegueDetailsComponent implements OnInit {
 
-  collegue:Collegue;
+  collegue:Collegue = new Collegue("","","","","","",0);
   @Output() eventVote: EventEmitter<Vote> = new EventEmitter<Vote>();
 
   constructor(private _collegueService:CollegueService, private route: ActivatedRoute) {
