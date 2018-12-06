@@ -16,6 +16,7 @@ import { AProposComponent } from './a-propos/a-propos.component';
 import { MenuComponent } from './menu/menu.component';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 const appRoutes: Routes = [
 
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {useHash: true})
   ],
 
   providers: [CollegueService],
