@@ -1,6 +1,6 @@
 <h1>Historiques</h1>
 <div *ngFor= "let vote of votes">
-  <img src="{{vote.personne.photo}}" />
+  <img src="{{vote.personne.imageUrl}}" />
   <p>{{vote.personne.pseudo}}</p>
   <p>{{vote.AvisNbPoints()}}</p>
   <button (click)="supprimer(vote)">Supprimer</button>
