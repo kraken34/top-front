@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Collegue, Avis } from '../models';
 import { environment } from 'src/environments/environment';
+import { FormInput } from '../ajouter-un-collegue/model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,9 @@ export class CollegueService {
     .then((collegue:any) => new Collegue(collegue.lienPhoto, collegue.pseudo, collegue.score, collegue.nom, collegue.prenom, collegue.email));
   }
 
+  sendInput(cNew:FormInput):Promise<FormInput>{
+    return this._http.post(environment.backendUrl + "/collegues/", cNew).toPromise()
+    .then((C:FormInput) => new FormInput())
+  }
 
 }

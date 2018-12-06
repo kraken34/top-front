@@ -14,12 +14,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AproposComponent } from './apropos/apropos.component';
 import { DetailsComponent } from './details/details.component';
+import { FormsModule } from '@angular/forms';
+import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
 
 const appRoutes: Routes = [
 
   { path: 'accueil', component: AccueilComponent }, // /page1 affiche le composant A
 
   { path: 'apropos', component: AproposComponent }, // /page2 affiche le composant B
+ 
+  { path: 'ajout', component: AjouterUnCollegueComponent }, // /page2 affiche le composant B
 
   { path: 'collegues/:pseudo', component: DetailsComponent},
 
@@ -37,13 +41,15 @@ const appRoutes: Routes = [
     MenuComponent,
     AccueilComponent,
     AproposComponent,
-    DetailsComponent
+    DetailsComponent,
+    AjouterUnCollegueComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
