@@ -18,7 +18,7 @@ export class CollegueService {
 
 
   constructor(private _http: HttpClient) { }
-
+  
   listerCollegues(): Promise<Collegue[]> {
     return this._http.get(`${URL_BACKEND}/collegues` ).toPromise()
       .then((tabCol: any[]) => tabCol
