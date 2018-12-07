@@ -10,7 +10,7 @@ export class FiltrePseudoPipe implements PipeTransform {
       return value;
     }
     else{
-      return value.filter(p => p.pseudo.toLowerCase().includes(filtreP.toLowerCase()))
+      return value.filter(p => p.pseudo.toUpperCase().includes(filtreP.toUpperCase()))
     }
   }
 }
