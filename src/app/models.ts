@@ -3,24 +3,24 @@ export class Collegue {
     score: number;
     listImages: string[];
 
-    constructor(pseudo, score, images:string[]) {
+    constructor(pseudo, score, images: string[]) {
         this.pseudo = pseudo;
         this.score = score;
         this.listImages = images;
     }
 }
-export class CollegueFull extends Collegue{
-    nom:string
-    prenom:string;
-    email:string;
-    adresse:string;
+export class CollegueFull extends Collegue {
+    nom: string
+    prenom: string;
+    email: string;
+    adresse: string;
 
-    constructor(pseudo, score, images:string[],nom,prenom,email,adresse){
+    constructor(pseudo, score, images: string[], nom, prenom, email, adresse) {
         super(pseudo, score, images);
-        this.nom=nom;
-        this.prenom=prenom;
-        this.email=email;
-        this.adresse=adresse;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.adresse = adresse;
     }
 }
 
@@ -31,13 +31,20 @@ export enum Avis {
 export class Vote {
     collegue: Collegue;
     avis: Avis;
-    oldScore:number;
-	dateVote:Date;
+    oldScore: number;
+    dateVote: Date;
 
-    constructor(collegue, avis,oldScore,date) {
+    constructor(collegue, avis, oldScore, date) {
         this.collegue = collegue;
         this.avis = avis;
-        this.oldScore=oldScore;
-        this.dateVote=date;
+        this.oldScore = oldScore;
+        this.dateVote = date;
     }
+}
+
+export class FormCollegue {
+    matricule: string;
+    pseudo: string;
+    imgUrl: string;
+
 }

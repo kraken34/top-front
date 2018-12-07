@@ -18,11 +18,14 @@ import { AproposComponent } from './apropos/apropos.component';
 import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
 import { MenuComponent } from './menu/menu.component';
 import { CollegueDetailComponent } from './collegue-detail/collegue-detail.component';
-import { CollegueFull } from './models';
+import { FormsModule }   from '@angular/forms';
+import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
 
 const appRoutes: Routes = [
 
-  { path: 'accueil', component: AccueilComponent }, // /page1 affiche le composant A
+  { path: 'accueil', component: AccueilComponent }, // /Accueil affiche le composant A
+
+  { path: 'collegues/nouveau', component: AjouterUnCollegueComponent },
 
   { path: 'collegue/:pseudo', component: CollegueDetailComponent },
 
@@ -35,13 +38,14 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, BandeauComponent, CollegueComponent, AvisComponent, ListeColleguesComponent, HistoriqueVotesComponent, AccueilComponent, AproposComponent,PageNonTrouveeComponent, MenuComponent, CollegueDetailComponent
+    AppComponent, BandeauComponent, CollegueComponent, AvisComponent, ListeColleguesComponent, HistoriqueVotesComponent, AccueilComponent, AproposComponent,PageNonTrouveeComponent, MenuComponent, CollegueDetailComponent, AjouterUnCollegueComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [
     CollegueService

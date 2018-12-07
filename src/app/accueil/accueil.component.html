@@ -1,6 +1,11 @@
 <div class="container">
   <app-bandeau></app-bandeau>
   <div class="row">
+    <a routerLink="/collegues/nouveau">
+      <button type="submit" mdbBtn color="primary" mdbWavesEffect>Ajouter</button>
+    </a>
+  </div>
+  <div class="row">
     <div class="col-8">
       <app-liste-collegues (vote)="addVote($event)" [tabCollegue]="expandable"></app-liste-collegues>
     </div>
