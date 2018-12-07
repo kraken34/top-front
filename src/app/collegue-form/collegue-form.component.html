@@ -1,0 +1,21 @@
+<div class="container" style="padding-top:80px">
+  <h2>Creer nouveau collegue</h2>
+  <form class="form-group was-validated" (ngSubmit)="submit()" #Collegueform="ngForm">
+    <div class="row">
+      <label class="col-form-label col-2">Matricule :</label>
+      <input class="form-control" [(ngModel)]="form.matricule" required name="matricule">
+      <div class="invalid-feedback col-5">Entrez un matricule valide !</div>
+    </div>
+    <div class="row">
+      <label class="col-form-label col-2">Pseudo :</label>
+      <input class="form-control" [(ngModel)]="form.pseudo" required minlength="2" name="pseudo">
+      <div class="invalid-feedback col-5">Plus de 2 lettres !</div>
+    </div>
+    <div class="row">
+      <label class="col-form-label col-2" >Image :</label>
+      <input class="form-control" [(ngModel)]="form.imgURL" name="imgURL">
+      <div class="valid-feedback col-5">Optionnel (récuperation en ligne)</div>
+    </div>
+    <button class="float-right btn btn-outline-dark right" type="submit" [disabled]="Collegueform.invalid">Creer</button>
+  </form>
+</div>

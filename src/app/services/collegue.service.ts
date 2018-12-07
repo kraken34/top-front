@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { Collegue, Avis} from '../models';
+import { Collegue, Avis, CollegueForm} from '../models';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -30,6 +30,13 @@ export class CollegueService {
   detailsCollegues(pseudo:string):Promise<Collegue> {
     return this._http.get(this.URL_BACKEND.concat("/collegues/").concat(pseudo)).toPromise()
     .then((c:Collegue) => c);
+  }
+
+  creerCollegue(matricule:string, pseudo:string, imgUrl:string):Promise<CollegueForm> {
+    return this._http.post(this.URL_BACKEND.concat("/collegues"),
+    {"matricule":matricule, "pseudo":pseudo, "urlImage":imgUrl},
+    {headers: new HttpHeaders({"Content-Type": "application/json"})}).toPromise()
+    .then((c:CollegueForm) => c);
   }
 
 }

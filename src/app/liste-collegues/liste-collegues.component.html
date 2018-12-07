@@ -1,3 +1,6 @@
-<div class="col-4" *ngFor="let c of collegues">
-  <app-collegue [collegue]="c" (eventVote)="onVote($event)"></app-collegue>
+<button class="btn btn-dark col-12" routerLink="/collegues/nouveau">Creer collegue</button>
+<div class="row">
+  <div class="col-4" *ngFor="let c of collegues">
+    <app-collegue [collegue]="c" (eventVote)="onVote($event)"></app-collegue>
+  </div>
 </div>

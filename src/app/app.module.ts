@@ -15,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { AproposComponent } from './apropos/apropos.component';
 import { CollegueDetailsComponent } from './collegue-details/collegue-details.component';
+import { CollegueFormComponent } from './collegue-form/collegue-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CollegueDetailsComponent } from './collegue-details/collegue-details.co
     AccueilComponent,
     MenuComponent,
     AproposComponent,
-    CollegueDetailsComponent
+    CollegueDetailsComponent,
+    CollegueFormComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { CollegueDetailsComponent } from './collegue-details/collegue-details.co
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([{ path: 'apropos',  component:AproposComponent },
-    { path: 'accueil', component:AccueilComponent},    
+    { path: 'accueil', component:AccueilComponent},   
+    { path: 'collegues/nouveau', component:CollegueFormComponent}, 
     { path: 'collegues/:pseudo', component:CollegueDetailsComponent},
     { path: '**', component:AccueilComponent}])
   ],
