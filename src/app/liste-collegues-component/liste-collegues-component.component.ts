@@ -10,6 +10,8 @@ export class ListeColleguesComponentComponent implements OnInit {
 
   @Input() collegues:Collegue[];
 
+  filt:string;
+
   constructor() { }
 
   ngOnInit() {
