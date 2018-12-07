@@ -1,0 +1,12 @@
+<div class="divDetails">
+  <img [src]="collegue.lienPhoto">
+
+  <p>
+    Nom : {{collegue.nom}} ;<br/>
+    Score : {{collegue.score}} ;<br/>
+    Email : {{collegue.email}} ;
+  </p>
+  
+  <br/>
+  <app-avis-component [score]="this.collegue.score" (action)="incrementScore($event)"></app-avis-component>
+</div>

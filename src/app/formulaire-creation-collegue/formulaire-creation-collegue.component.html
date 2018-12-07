@@ -1,0 +1,56 @@
+<div class="styleFormulaire">
+
+  <h2>Formulaire de création de Collègue</h2>
+
+  <form (ngSubmit)="submit()" #localForm="ngForm">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-offset-4 col-4">
+          <label>Matricule</label>
+        </div>
+        <div class="col-4">
+          <input [(ngModel)]="modelDeFormulaire.matricule" name="matricule" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-offset-4 col-4">
+          <label>Pseudo</label>
+        </div>
+        <div class="col-4">
+          <input [(ngModel)]="modelDeFormulaire.pseudo" name="pseudo" required minlength="2">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-offset-4 col-4">
+          <label>url de la photo :</label>
+        </div>
+        <div class="col-4">
+          <input [(ngModel)]="modelDeFormulaire.lienPhoto" name="lienPhoto">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-offset-4 col-4">
+          <label>Email :</label>
+        </div>
+        <div class="col-4">
+          <input [(ngModel)]="modelDeFormulaire.email" name="email">
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-2">
+        <button type="submit" class="btn blue-gradient btn-block btn-rounded" 
+          [disabled]="!localForm.valid">C r é e r</button>
+      </div>
+    </div>
+  </form>
+
+  <p *ngIf="statusRequete"><strong> Status de l'envoie :</strong> {{statusRequete[1] | json}}</p>
+
+</div>

@@ -1,0 +1,18 @@
+<!-- <app-bandeau-component></app-bandeau-component> -->
+
+
+<!-- <app-collegue-component [collegue] = "collegueMario" (actionVote)="this.incrementHistoriqueVote($event)"></app-collegue-component> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      
+      <app-liste-collegues [collegues]="listeColleguesExemple" (actionVote)="historiqueVotes.incrementHistoriqueVote($event)"></app-liste-collegues>
+
+
+    </div>
+    <div class="col-12 col-lg-4">
+      <h1 class="border"> Historique : </h1>
+      <app-historique-vote [historiqueVotes]="historiqueVotes"></app-historique-vote>
+    </div>
+  </div>
+</div>

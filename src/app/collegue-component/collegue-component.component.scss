@@ -1,0 +1,24 @@
+img{
+    // width : 250px;
+    width: 100%;
+    height: auto;
+}
+
+.box_Collegue{
+    text-align:center;
+    border : 2px solid black;
+    width : 55%;
+    font-size: 2em;
+    font-family: Amaranth;
+}
+
+.box_Collegue a{
+    font-size: 0.7em;
+    color: blue;
+}
+
+.box_Collegue img{
+    max-height:313px;
+    width :auto;
+    max-width: 100%;
+}
