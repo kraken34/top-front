@@ -1,0 +1,12 @@
+<button class="btn-primary rounded" (click)="actualiser()">actualiser</button>
+<br>
+<span>Filtrer par pseudo : </span>
+
+<div class="container">
+    <input type="text" [(ngModel)]="filtreP">
+  <div class="row">
+    <div class="col-4" *ngFor="let collegue1 of lesCollegues | filtrePseudo : filtreP">
+      <app-collegue [collegue]="collegue1"></app-collegue>
+    </div>
+  </div>
+</div>
