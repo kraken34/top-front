@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 import { AproposComponent } from './apropos/apropos.component';
 import { CollegueDetailsComponent } from './collegue-details/collegue-details.component';
 import { CollegueFormComponent } from './collegue-form/collegue-form.component';
+import { ScorePipe } from './pipes/score.pipe';
+import { ColleguePipe } from './pipes/collegue.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { CollegueFormComponent } from './collegue-form/collegue-form.component';
     MenuComponent,
     AproposComponent,
     CollegueDetailsComponent,
-    CollegueFormComponent
+    CollegueFormComponent,
+    ScorePipe,
+    ColleguePipe
   ],
   imports: [
     BrowserModule,

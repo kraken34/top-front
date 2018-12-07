@@ -33,7 +33,7 @@ export class AccueilComponent implements OnInit {
     .then( c => this.listCollegues = c)
     .catch((error: HttpErrorResponse) => {
       console.error(`Error on service collegue : ${error.message}`)
-    });; 
+    });
   }
 
 }

@@ -8,9 +8,9 @@ import { Collegue, Vote } from '../models';
 })
 export class ListeColleguesComponent implements OnInit {
 
+  filter:string;
   @Input() collegues:Collegue[]; 
   @Output() eventVote: EventEmitter<Vote> = new EventEmitter<Vote>();
-
 
   constructor() {
   }
