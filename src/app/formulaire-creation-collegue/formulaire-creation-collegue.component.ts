@@ -20,7 +20,7 @@ export class FormulaireCreationCollegueComponent implements OnInit {
   // grâce au binding bi-directionnel  [(ngModel)]
   modelDeFormulaire:ModelDeFormulaire = new ModelDeFormulaire();
 
-  statusRequete:number[];
+  statusRequete:[number, string];
   
   constructor(private _collegueDetailsService:CollegueAcDetailsService) { }
 
@@ -38,16 +38,20 @@ export class FormulaireCreationCollegueComponent implements OnInit {
                                                               0,
                                                               this.modelDeFormulaire.lienPhoto,
                                                               this.modelDeFormulaire.email))
-                                  .then((response:HttpResponse<any>) => {console.log(`Status : ${response.status}\n
-                                                                                     header : ${response.headers}`);
+                                  .then((response:HttpResponse<any>) => {
+                                                                        let stringResult:string =`Status : ${response.status}\n
+                                                                                       header : ${response.headers}`;
+                                                                        console.log(stringResult);
                                                                         if((response.status >= 300)){
-                                                                          this.statusRequete = [1,response.status];
+                                                                          this.statusRequete = [1,stringResult];
                                                                         }else{
-                                                                          this.statusRequete = [2,response.status];
+                                                                          this.statusRequete = [2,stringResult];
                                                                         }
                                                                       })
-                                  .catch(err => {console.log(`requête échouée : ${err}\n`);
-                                                  this.statusRequete = [0]
+                                  .catch(err => {
+                                                  let stringResult:string = `requête échouée : ${err}`
+                                                  console.log(stringResult);
+                                                  this.statusRequete = [0,stringResult]
                                                 })
       
 
