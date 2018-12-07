@@ -8,6 +8,6 @@
 </mdb-carousel>
 <!--/.Carousel Wrapper-->
 <a routerLink="/collegue/{{collegue.pseudo}}"><h2 class="text-center">{{collegue.pseudo}}</h2></a>
-<h2 class="text-center">{{collegue.score}}</h2>
+<h2 class="text-center" [innerHTML]="collegue.score|score"></h2>
 <app-avis (change)="traiter($event)" [jaimeActif]="likeUnActive()" [destesteActif]="dislikeUnActive()"></app-avis>
 

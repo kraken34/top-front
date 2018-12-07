@@ -2,10 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Collegue, Avis, Vote } from '../models';
 import { CollegueService } from '../services/collegue.service';
 
+
 @Component({
   selector: 'app-collegue',
   templateUrl: './collegue.component.html',
-  styleUrls: ['./collegue.component.scss']
+  styleUrls: ['./collegue.component.scss'],
 })
 export class CollegueComponent implements OnInit {
 

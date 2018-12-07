@@ -1,9 +1,18 @@
 <div class="container">
   <app-bandeau></app-bandeau>
   <div class="row">
+    <a routerLink="/">
+      <button type="submit" mdbBtn color="primary" mdbWavesEffect>rafraichir la liste</button>
+    </a>
     <a routerLink="/collegues/nouveau">
       <button type="submit" mdbBtn color="primary" mdbWavesEffect>Ajouter</button>
     </a>
+  </div>
+  <div class="row">
+    <div class="md-form row">
+      <input mdbInputDirective type="text" id="form1" class="form-control">
+      <label for="form1" class="">filtrer par pseudo</label>
+    </div>
   </div>
   <div class="row">
     <div class="col-8">

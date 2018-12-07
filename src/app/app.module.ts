@@ -20,6 +20,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CollegueDetailComponent } from './collegue-detail/collegue-detail.component';
 import { FormsModule }   from '@angular/forms';
 import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
+import { ScorePipe } from './pipes/score.pipe';
 
 const appRoutes: Routes = [
 
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, BandeauComponent, CollegueComponent, AvisComponent, ListeColleguesComponent, HistoriqueVotesComponent, AccueilComponent, AproposComponent,PageNonTrouveeComponent, MenuComponent, CollegueDetailComponent, AjouterUnCollegueComponent
+    AppComponent, BandeauComponent, CollegueComponent, AvisComponent, ListeColleguesComponent, HistoriqueVotesComponent, AccueilComponent, AproposComponent,PageNonTrouveeComponent, MenuComponent, CollegueDetailComponent, AjouterUnCollegueComponent, ScorePipe
   ],
   imports: [
     BrowserModule,
