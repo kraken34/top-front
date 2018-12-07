@@ -1,0 +1,9 @@
+<button routerLink="/collegues/nouveau">Nouveau</button> <br/>
+<span>Filtrer par pseudo : </span>
+<input name="filtre" [(ngModel)]="filtreP" >
+
+<div *ngFor= "let col of collegues | filtrePseudo : filtreP">
+  
+    <app-collegue-component (eventVote)="onEventVote($event)" [collegue]="col"></app-collegue-component>
+
+</div>

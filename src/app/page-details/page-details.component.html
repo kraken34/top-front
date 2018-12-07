@@ -1,0 +1,11 @@
+<div>
+  <img src="{{collegue.imageUrl}}" width="250px" height="250px">
+  <h3>{{collegue.pseudo}}</h3>
+  <h3>{{collegue.score}}</h3>
+
+  <h5>{{collegue.nom}}</h5>
+  <h5>{{collegue.prenom}}</h5>
+  <h5>{{collegue.mail}}</h5>
+  <h5>{{collegue.adresse}}</h5>
+  <app-avis-component (eventLike)="onAvis($event)"></app-avis-component>
+</div>
