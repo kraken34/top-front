@@ -1,0 +1,14 @@
+<h1>{{ajoutCollegue.pseudo}}</h1>
+<form (ngSubmit)="submit()" #activerBouton="ngForm">
+
+  <label>Matricule</label>
+  <input [(ngModel)]="ajoutCollegue.matricule" name="matricule" #matricule="ngModel" required>
+  <br>
+  <label>Pseudo</label>
+  <input [(ngModel)]="ajoutCollegue.pseudo" name="pseudo" #pseudo="ngModel" required minlength="2">
+  <br>
+  <label>URL image</label>
+  <input [(ngModel)]="ajoutCollegue.photo" name="photo" #photo="ngModel">
+  <br>
+  <button type="submit" [disabled]="!activerBouton.valid">Submit</button>
+</form>

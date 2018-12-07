@@ -1,2 +1,2 @@
-<button class="btn-primary rounded" style="margin-right: 50px" (click)="aimer()" [disabled]="maxA">J'aime</button>
-<button class="btn-primary rounded" (click)="detester()" [disabled]="maxD">Je déteste</button>
+<button class="btn-primary rounded" style="margin-right: 50px" (click)="aimer()" [disabled]="!maxA">J'aime</button>
+<button class="btn-primary rounded" (click)="detester()" [disabled]="!maxD">Je déteste</button>

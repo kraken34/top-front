@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Collegue } from '../models';
+import { CollegueService } from '../services/collegue.service';
 
 @Component({
   selector: 'app-detail',
@@ -9,19 +10,18 @@ import { Collegue } from '../models';
 })
 export class DetailComponent implements OnInit {
 
-  @Input() collegue: Collegue;
-  
+  collegue: Collegue;
   pseudo: string;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private col: CollegueService) {
     this.pseudo = route.snapshot.paramMap.get("pseudo")
+
+    col.chercherParPseudo(this.pseudo)
+      .subscribe(col => this.collegue = col)
 
   }
 
   ngOnInit() {
   }
 
-  changerDePage() {
-    this.router.navigate(['/' + this.collegue.pseudo, { pseudo: "pseudo" }])
-  }
 }

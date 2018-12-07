@@ -13,12 +13,15 @@ import { ListeColleguesComponent } from './liste-collegues/liste-collegues.compo
 import { MenuComponent } from './menu/menu.component';
 import { CollegueService } from './services/collegue.service';
 import { DetailComponent } from './detail/detail.component';
+import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
+import { FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'apropos', component: AproposComponent },
+  { path: 'ajouter', component: AjouterUnCollegueComponent},
   { path: '',   redirectTo: 'accueil', pathMatch: 'full' },
-  { path: ':pseudo', component: DetailComponent}
+  { path: 'collegue/:pseudo', component: DetailComponent}
 ]
 
 @NgModule({
@@ -32,12 +35,14 @@ const appRoutes: Routes = [
     AccueilComponent,
     MenuComponent,
     AproposComponent,
-    DetailComponent
+    DetailComponent,
+    AjouterUnCollegueComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [CollegueService],
   bootstrap: [AppComponent]

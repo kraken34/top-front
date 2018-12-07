@@ -9,7 +9,7 @@ import { CollegueService } from '../services/collegue.service';
 })
 export class CollegueComponent implements OnInit {
   @Input() collegue: Collegue
-  @Input() cherch;
+
   constructor(private _collegueService: CollegueService) { }
 
   ngOnInit() {
