@@ -1,4 +1,12 @@
 <div class="container-fluid">
+
+
+  <div class="row justify-content-center positionBouton">
+    <div class="col-lg-6">
+      <button class="btn blue-gradient btn-block btn-rounded" (click)="creerCollegue()">Ajouter un collègue</button>
+    </div>
+  </div>
+  
   <div class="row justify-content-around align-items-center">
 
     <div class="col-12 col-sm-6 col-lg-4" *ngFor="let collegueI of collegues">
@@ -7,4 +15,6 @@
 
     </div>
   </div>
+
+
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Collegue, Vote } from '../models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-collegues',
@@ -12,13 +13,17 @@ export class ListeColleguesComponent implements OnInit {
 
   @Output() actionVote:EventEmitter<Vote> = new EventEmitter<Vote>();
 
-  constructor() { }
+  constructor(private _router:Router) { }
 
   ngOnInit() {
   }
 
   remonteVote(vote:Vote){
     this.actionVote.emit(vote);
+  }
+
+  creerCollegue():void{
+    this._router.navigate(["/nouveau"]);
   }
 
 }

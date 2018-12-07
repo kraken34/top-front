@@ -2,14 +2,14 @@ import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CollegueService } from '../services/collegue.service';
 import { Collegue,  CollegueAcDetails } from '../models';
-import { CollegueComponentComponent } from '../collegue-component/collegue-component.component';
+import { AbstractCollegueComp } from '../app.abstractClasses';
 
 @Component({
   selector: 'app-detail-collegue',
   templateUrl: './detail-collegue.component.html',
   styleUrls: ['./detail-collegue.component.scss']
 })
-export class DetailCollegueComponent extends CollegueComponentComponent {
+export class DetailCollegueComponent extends AbstractCollegueComp {
 
 
   // nomRecherche: String;

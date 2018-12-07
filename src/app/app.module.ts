@@ -17,6 +17,8 @@ import { MenuComponent } from './menu/menu.component';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { FormulaireCreationCollegueComponent } from './formulaire-creation-collegue/formulaire-creation-collegue.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
 
@@ -25,6 +27,8 @@ const appRoutes: Routes = [
   { path: 'apropos', component: AProposComponent }, 
 
   { path: 'collegues/:nom', component: DetailCollegueComponent },
+
+  { path: 'nouveau', component: FormulaireCreationCollegueComponent }, 
 
   { path: '',   redirectTo: '/accueil', pathMatch: 'full' }, // redirige vers la route page1 par défaut
 
@@ -42,14 +46,16 @@ const appRoutes: Routes = [
     AccueilComponent,
     AProposComponent,
     MenuComponent,
-    DetailCollegueComponent
+    DetailCollegueComponent,
+    FormulaireCreationCollegueComponent
   ],
 
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, {useHash: true})
+    RouterModule.forRoot(appRoutes, {useHash: true}),
+    FormsModule
   ],
 
   providers: [CollegueService],
