@@ -1,0 +1,10 @@
+<div class="alert alert-warning mr-auto" style="text-align:center;padding-top:80px">
+    <img class="rounded mx-auto d-block" src="{{collegue.photo}}" alt="avatar"/>
+    <h3>{{collegue.pseudo}}</h3>
+    <div>Score : {{collegue.score}}</div>
+    <div>Nom : {{collegue.nom}}</div>
+    <div>Prenom : {{collegue.prenom}}</div>
+    <div>Adresse : {{collegue.adresse}}</div>
+    <div>Email : {{collegue.email}}</div>
+    <app-avis (eventAvis)="onAvis($event)" [disableLike]="isLiked()" [disableDislike]="isDisliked()"></app-avis>
+  </div>

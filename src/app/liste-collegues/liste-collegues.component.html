@@ -1,0 +1,10 @@
+<div class="form-control list-inline">
+  <label class="list-inline-item text-right col-2">Filtre par Pseudo :</label>
+  <input class="list-inline-item col-9" [(ngModel)]="filter">
+</div>
+<button class="col-12 btn btn-dark" routerLink="/collegues/nouveau">Creer collegue</button>
+<div class="row">
+  <div class="col-4" *ngFor="let c of collegues | collegue:filter">
+    <app-collegue [collegue]="c" (eventVote)="onVote($event)"></app-collegue>
+  </div>
+</div>
