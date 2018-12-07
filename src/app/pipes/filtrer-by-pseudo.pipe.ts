@@ -9,10 +9,10 @@ export class FiltrerByPseudoPipe implements PipeTransform {
         if(args==undefined){
           return value;
         }else{
-          value=value.filter((val)=>val.pseudo.toLowerCase().includes(args.toLowerCase()));
+          return value.filter((val)=>val.pseudo.toLowerCase().includes(args.toLowerCase()));
         }
 
-    return value;
+     
   }
 
 }
