@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 })
 export class ListeColleguesComponent implements OnInit {
 
+
+  pseudoFiltre:string;
+
   @Input() collegues:Collegue[];
 
   @Output() actionVote:EventEmitter<Vote> = new EventEmitter<Vote>();
