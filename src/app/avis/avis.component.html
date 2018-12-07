@@ -1,0 +1,8 @@
+<div class="row justify-content-center">
+    <div class="col-6" >
+        <button type="button" mdbBtn color="primary" [disabled]="jaimeActif"  mdbWavesEffect (click)="avisPositif()">J'aime</button>
+    </div>
+    <div class="col-6">
+        <button type="button" mdbBtn color="danger" [disabled]="destesteActif" mdbWavesEffect (click)="avisNegatif()">Je déteste</button>
+    </div>
+</div>

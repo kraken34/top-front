@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+.scorePositif{
+    color: blue;
+}
+
+.scoreNegatif{
+    color: red;
+}
+
+.score{
+    font-size: 1.2em;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="alert alert-danger" role="alert" *ngIf="messageError">
+      {{messageError}}
+  </div>
+  <form (ngSubmit)="submit()" #monForm="ngForm">
+    <div class="md-form form-sm">
+      <i class="fa fa-qrcode prefix"></i>
+      <input mdbInputDirective type="text" id="form2" class="form-control" [(ngModel)]="monModel.matricule" name="matricule" #matricule="ngModel" required >
+      <label for="form2">Matricule</label>
+    </div>
+    <div class="md-form form-sm">
+      <i class="fa fa-user prefix"></i>
+      <input mdbInputDirective type="text" id="form3" class="form-control" [(ngModel)]="monModel.pseudo" name="pseudo" #pseudo="ngModel" required minlength="3">
+      <label for="form3">Pseudo</label>
+    </div>
+    <div class="md-form form-sm">
+      <i class="fa fa-picture-o prefix"></i>
+      <input mdbInputDirective type="text" id="form4" class="form-control" [(ngModel)]="monModel.imgUrl" name="imgUrl" #imgUrl="ngModel">
+      <label for="form4">Url image</label>
+    </div>
+    <button type="submit" mdbBtn color="primary" [disabled]="!monForm.valid" mdbWavesEffect>Ajouter</button>
+  </form>
+</div>

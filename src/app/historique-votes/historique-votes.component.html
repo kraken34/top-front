@@ -1,0 +1,15 @@
+<h2>Historique</h2>
+<div *ngFor="let col of listVote">
+  <div class="media">
+    <div class="col-4">
+      <img class="img-fluid" src="{{col.collegue.listImages[0]}}">
+    </div>
+    <div class="media-body col">
+      <h5 class="mt-0 font-weight-bold">{{col.collegue.pseudo}}</h5>
+      {{col.collegue.pseudo}} est détesté, il a désormais un score de {{col.collegue.score}}
+      <span *ngIf="etreAimer(col.avis) ;else elseBlock"> :-)</span>
+      <ng-template #elseBlock>-:(</ng-template><br>
+      <a (click)="delete(col)">Supprimer</a>
+    </div>
+  </div>
+</div>
