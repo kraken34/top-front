@@ -1,6 +1,7 @@
 
 <img src={{collegue.lienPhoto}}>
-<p> <a href="collegues/{{collegue.pseudo}}">{{collegue.pseudo}}</a> </p>
-<p> Votre score est de : : {{ collegue.score }}</p>
+<p> <a href="collegues/{{collegue.pseudo}}">{{collegue.pseudo | uppercase}}</a> </p>
+<p> Votre score est de : </p>
+<p [innerHTML]="collegue.score | score"></p>
 
 <app-avis-component (counterChange)="onChange($event)" [like]="isMax()" [dislike]="isMin()"></app-avis-component>

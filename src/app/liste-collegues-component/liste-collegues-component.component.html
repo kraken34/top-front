@@ -1,7 +1,8 @@
 
   <div class="container">
     <div class="row">
-      <div class=".col-xs-6 .col-md-4" *ngFor="let c of collegues">
+      <input [(ngModel)]="filt" placeholder="enter search term here">
+      <div class=".col-xs-6 .col-md-4" *ngFor="let c of collegues | filter : filt">
         <app-collegue-component [collegue]="c"></app-collegue-component>
       </div>
     </div>
