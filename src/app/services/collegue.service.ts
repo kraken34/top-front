@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Collegue, Avis, Vote } from '../models';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { MonForm } from '../ajouter-un-collegue/ajouter-un-collegue.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -29,7 +30,8 @@ export class CollegueService {
     return this._http.get(this.URL_BACKEND.concat("/collegues/").concat(pseudo)).toPromise().then((c:Collegue)=>c);
   }
 
-  ajouterUnCollegue():Promise<Collegue>{
-    return
+  ajouterUnCollegue(matricule:string, pseudo :string,imageUrl:string):Promise<MonForm>{
+    return this._http.post(this.URL_BACKEND.concat("/collegues/"),{ "matricule":matricule, "pseudo":pseudo, "imageUrl":imageUrl},
+    {headers: new HttpHeaders({ "Content-Type": "application/json"})}).toPromise().then((c:MonForm)=>c);
   }
 }

@@ -16,6 +16,8 @@ import {AproposComponent} from './apropos/apropos.component';
 import { PageDetailsComponent } from './page-details/page-details.component';
 import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
 import { FormsModule }   from '@angular/forms';
+import { ScorePipe } from './pipes/score.pipe';
+import { FiltrePipe } from './pipes/filtre.pipe';
 
 const appRoutes : Routes = [
   {path:'acceuil', component: AcceuilComponentComponent},
@@ -39,7 +41,9 @@ const appRoutes : Routes = [
     MenuComponent,
     AproposComponent,
     PageDetailsComponent,
-    AjouterUnCollegueComponent
+    AjouterUnCollegueComponent,
+    ScorePipe,
+    FiltrePipe
    
   ],
   imports: [
