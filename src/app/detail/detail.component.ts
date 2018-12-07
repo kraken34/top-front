@@ -16,7 +16,7 @@ export class DetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private collegueService: CollegueService) {
     this.id = route.snapshot.paramMap.get("id")
-    collegueService.getCollegue(this.id).then(collegueRecup => this.collegue = collegueRecup)
+    collegueService.getCollegue(this.id).subscribe(collegueRecup => this.collegue = collegueRecup)
   }
 
   ngOnInit() {

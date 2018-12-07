@@ -1,6 +1,6 @@
 <div>
   <img src="{{collegue.photo}}">
-  <a href="collegues/{{collegue.pseudo}}">{{collegue.pseudo}}</a>
-  <p>Score : {{collegue.score}}</p>
+  <a href="collegues/{{collegue.pseudo}}">{{ collegue.pseudo | lowercase }}</a>
+  <div [innerHtml]="collegue.score|score"></div>
   <app-avis (change)="onAvis($event)" [likeActivated]=isLikeInactif() [dislikeActivated]=isDislikeInactif()></app-avis>
 </div>

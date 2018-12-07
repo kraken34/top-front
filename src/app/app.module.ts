@@ -16,6 +16,9 @@ import { DetailComponent } from './detail/detail.component';
 import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { FormsModule }   from '@angular/forms';
+import { ScorePipe } from './pipes/score.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { VotreDernierAvisComponent } from './votre-dernier-avis/votre-dernier-avis.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -40,6 +43,9 @@ const appRoutes: Routes = [
     DetailComponent,
     PageNonTrouveeComponent,
     FormulaireComponent,
+    ScorePipe,
+    FilterPipe,
+    VotreDernierAvisComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,11 @@
+<app-votre-dernier-avis></app-votre-dernier-avis>
 <button (click)="refresh()">Rafraichir</button>
+<p id="filter">Filtrer par pseudo <input type="text" [(ngModel)]="filterValue"></p>
 <div *ngIf=error>
     <p>Une erreur coquine est survenue inopinément...</p>
 </div>
 <div class="row" *ngIf=!error>
-    <div class="col-3" *ngFor="let item of collegues">
+    <div class="col-3" *ngFor="let item of collegues|filter:filterValue">
         <app-collegue [collegue]=item (backError)="error=true"></app-collegue>
     </div>
 </div>

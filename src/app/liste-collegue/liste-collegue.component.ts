@@ -16,7 +16,7 @@ export class ListeCollegueComponent implements OnInit {
   constructor(private cService: CollegueService) { }
 
   refresh() {
-    this.cService.listerCollegues().then(colleguesList => { this.collegues = colleguesList; this.error = false }).catch(err => this.error = true)
+    this.cService.listerCollegues().subscribe(colleguesList => { this.collegues = colleguesList; this.error = false }, err => this.error = true)
   }
 
   ngOnInit() {

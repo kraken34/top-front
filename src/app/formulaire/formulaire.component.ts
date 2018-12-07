@@ -22,15 +22,13 @@ export class FormulaireComponent implements OnInit {
 
   submit() {
     this.errorMatricule = false
-    this.service.exists(this.matricule, this.pseudo, this.photo).then(() => {
-      this.router.navigate(['/accueil'])
-    }).catch((error: HttpErrorResponse) => {
-      if (error.status == 400) {
-        this.errorMatricule = true
-      } else {
-        this.router.navigate(['?'])
-      }
-    })
+    this.service.exists(this.matricule, this.pseudo, this.photo).subscribe(() => this.router.navigate(['/accueil']),
+      (error: HttpErrorResponse) => {
+        if (error.status == 400)
+          this.errorMatricule = true
+        else
+          this.router.navigate(['?'])
+      })
   }
 
   ngOnInit() {
