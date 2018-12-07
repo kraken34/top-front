@@ -5,7 +5,7 @@
 <div class="container">
     <input [(ngModel)]="filtreP">
   <div class="row">
-    <div class="col-4" *ngFor="let collegue1 of lesCollegues | filtrePseudo : filtreP">
+    <div class="col-4" *ngFor="let collegue1 of lesCollegues | filtrePseudo : (filtreP)">
       <app-collegue [collegue]="collegue1"></app-collegue>
     </div>
   </div>
