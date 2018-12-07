@@ -9,8 +9,11 @@ import { Collegue } from '../app.model';
 export class ListeCollegueComponent implements OnInit {
 
   @Input() collegues:Collegue[];
+  saisie:string;
 
   ngOnInit() {
   }
+
+
 
 }

@@ -10,7 +10,9 @@ export class HistoriqueVotesComponent implements OnInit {
 
   @Input() votes:Vote[];
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }
