@@ -19,6 +19,7 @@ import { DetailCollegueComponent } from './detail-collegue/detail-collegue.compo
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { FormulaireCreationCollegueComponent } from './formulaire-creation-collegue/formulaire-creation-collegue.component';
 import { FormsModule } from '@angular/forms';
+import { CollegueAcDetailsService } from './services/collegue-ac-details.service';
 
 const appRoutes: Routes = [
 
@@ -58,7 +59,7 @@ const appRoutes: Routes = [
     FormsModule
   ],
 
-  providers: [CollegueService],
+  providers: [CollegueService, CollegueAcDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

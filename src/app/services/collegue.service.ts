@@ -12,7 +12,7 @@ const URL_BACKEND = environment.backendUrl;
 @Injectable()
 export class CollegueService {
 
-  constructor(private _http:HttpClient) { }
+  constructor(protected _http:HttpClient) { }
 
   
   // récupérer la liste des collègues côté serveur
@@ -75,5 +75,7 @@ export class CollegueService {
                       .toPromise()
                       .then((c:Collegue) => c)
   }
+
+
 
 }
