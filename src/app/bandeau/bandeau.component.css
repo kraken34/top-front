@@ -1,0 +1,11 @@
+h1 {text-align: center;color:rgba(243, 47, 214, 0.9);font-size: 130px; animation-duration: 0.4s; animation-name: clignotte; animation-iteration-count: infinite;margin:0px 0px;}
+p {text-align: center;color:rgba(255, 148, 239, 0.9);font-size: 80px;margin:0px 0px 100px 0px;}
+
+@keyframes clignotte{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
