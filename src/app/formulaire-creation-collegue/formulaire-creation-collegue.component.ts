@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CollegueAcDetails } from '../models';
 import { CollegueAcDetailsService } from '../services/collegue-ac-details.service';
-import { HttpResponse } from '@angular/common/http';
+import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 
 
 
@@ -48,8 +48,8 @@ export class FormulaireCreationCollegueComponent implements OnInit {
                                                                           this.statusRequete = [2,stringResult];
                                                                         }
                                                                       })
-                                  .catch(err => {
-                                                  let stringResult:string = `requête échouée : ${err}`;
+                                  .catch((err:HttpErrorResponse) => {
+                                                  let stringResult:string = `requête échouée : ${err.message}`;
                                                   console.log(stringResult);
                                                   this.statusRequete = [0,stringResult]
                                                 })

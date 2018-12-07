@@ -51,6 +51,6 @@
     </div>
   </form>
 
-  <p *ngIf="statusRequete"><strong> Status de l'envoie :</strong> {{statusRequete[1]}}</p>
+  <p *ngIf="statusRequete"><strong> Status de l'envoie :</strong> {{statusRequete[1] | json}}</p>
 
 </div>
