@@ -9,6 +9,9 @@ import { Collegue, Vote } from '../models';
 export class ListeColleguesComponentComponent implements OnInit {
   @Output() eventVote:EventEmitter<Vote> = new EventEmitter<Vote>();
 @Input() collegues: Collegue[]; 
+
+filtreP:string
+
   constructor() { }
 
   ngOnInit() {

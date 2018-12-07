@@ -1,6 +1,6 @@
 <button routerLink="/collegues/nouveau">Nouveau</button> <br/>
 <span>Filtrer par pseudo : </span>
-<input [(ngModel)]="filtreP" >
+<input name="filtre" [(ngModel)]="filtreP" >
 
 <div *ngFor= "let col of collegues | filtrePseudo : filtreP">
   
