@@ -18,13 +18,6 @@ export class CollegueComponent implements OnInit {
   actualiserAvis(av: Avis) {
     this._collegueService.donnerUnAvis(this.collegue, av)
       .then(col => this.collegue.score = col.score)
-    // if (this.collegue.score <= 1000 || this.collegue.score >= -1000) {
-    //   if (av == Avis.AIMER) {
-    //     this.collegue.score += 100;
-    //   } else {
-    //     this.collegue.score -= 100;
-    //   }
-    // }
   }
 
   maxA() {

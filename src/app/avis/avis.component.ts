@@ -10,9 +10,8 @@ export class AvisComponent implements OnInit {
 
   @Input() maxA;
   @Input() maxD;
-
+  
   @Output() vote: EventEmitter<Avis> = new EventEmitter<Avis>();
-  // @Output() hist: EventEmitter<> = new EventEmitter();
   constructor() { }
 
   aimer() {
@@ -27,5 +26,3 @@ export class AvisComponent implements OnInit {
 
   }
 }
-
-
