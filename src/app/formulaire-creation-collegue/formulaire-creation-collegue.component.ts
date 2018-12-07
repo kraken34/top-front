@@ -49,7 +49,7 @@ export class FormulaireCreationCollegueComponent implements OnInit {
                                                                         }
                                                                       })
                                   .catch(err => {
-                                                  let stringResult:string = `requête échouée : ${err}`
+                                                  let stringResult:string = `requête échouée : ${err}`;
                                                   console.log(stringResult);
                                                   this.statusRequete = [0,stringResult]
                                                 })

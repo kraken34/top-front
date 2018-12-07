@@ -7,7 +7,7 @@ import { AbstractCollegueComp } from '../app.abstractClasses';
 @Component({
   selector: 'app-collegue-component',
   templateUrl: './collegue-component.component.html',
-  styleUrls: ['./collegue-component.component.scss']
+  styleUrls: ['./collegue-component.component.scss'],
 })
 export class CollegueComponentComponent extends AbstractCollegueComp {
 

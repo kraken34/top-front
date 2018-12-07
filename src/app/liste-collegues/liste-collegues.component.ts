@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Collegue, Vote } from '../models';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-liste-collegues',
   templateUrl: './liste-collegues.component.html',

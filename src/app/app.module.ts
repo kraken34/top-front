@@ -20,6 +20,8 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { FormulaireCreationCollegueComponent } from './formulaire-creation-collegue/formulaire-creation-collegue.component';
 import { FormsModule } from '@angular/forms';
 import { CollegueAcDetailsService } from './services/collegue-ac-details.service';
+import { ScorePipe } from './pipes/score.pipe';
+import { FiltreColleguesPipe } from './pipes/filtre-collegues.pipe';
 
 const appRoutes: Routes = [
 
@@ -48,7 +50,9 @@ const appRoutes: Routes = [
     AProposComponent,
     MenuComponent,
     DetailCollegueComponent,
-    FormulaireCreationCollegueComponent
+    FormulaireCreationCollegueComponent,
+    ScorePipe,
+    FiltreColleguesPipe
   ],
 
   imports: [
