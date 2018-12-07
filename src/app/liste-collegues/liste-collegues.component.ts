@@ -12,6 +12,8 @@ export class ListeColleguesComponent implements OnInit {
 
   @Input() lesCollegues: Collegue[];
 
+  filtreP: string;  
+
   constructor() { }
 
   actualiser() {
