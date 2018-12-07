@@ -1,0 +1,13 @@
+<div class="jumbotron"> Historique des Votes
+  <div *ngFor="let v of lesVotes">
+    <div>
+        {{v.collegue.nom}}
+    </div>
+    <div>
+        <img src="{{v.collegue.images}}" alt="" height="200px">
+    </div>
+    <div>
+        <button class="btn-danger" (click)="supp(v)">Supprimer Vote</button>
+    </div>
+  </div>
+</div>

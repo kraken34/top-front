@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <a routerLink="/collegue/{{collegue.pseudo}}">
+         {{ collegue.pseudo | uppercase }}
+    </a>
+    <div [innerHTML] ="collegue.score | score">
+    </div> <br>
+  </div>
+  <div>
+    <img [src]="collegue.images" alt="">
+      
+  </div>
+
+  <app-avis (counterChange)="notation($event)" [tropDeHaine]="tropDeHaine()" [tropDamour]="tropDamour()"></app-avis>
+
+</div>

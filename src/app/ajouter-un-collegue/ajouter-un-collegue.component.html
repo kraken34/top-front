@@ -1,0 +1,12 @@
+<h1>{{add.pseudo}}</h1>
+
+<form (ngSubmit)="submit()" #activBouton="ngForm" class="formCollegue">
+
+    <label>Matricule</label><input [(ngModel)]="add.matricule" name="matricule" #matricule="ngModel" required> <br>
+
+    <label>Pseudo</label><input [(ngModel)]="add.pseudo" name="pseudo" #pseudo="ngModel" required minlength="2"> <br>
+
+    <label>URL image</label><input [(ngModel)]="add.imageUrl" name="image" #image="ngModel"> <br>
+
+    <button type="submit" [disabled]="!activBouton.valid">Ajouter</button>
+</form>`
