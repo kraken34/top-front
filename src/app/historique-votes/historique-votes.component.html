@@ -1,4 +1,4 @@
 <div *ngFor="let unVote of votes" class="blocVote">
-  <img src="{{unVote.collegue.photo}}" class="imgVote"/> {{unVote.collegue.pseudo}} {{unVote.collegue.score}}
+  <img src="{{unVote.collegue.photo}}" class="imgVote"/> {{unVote.collegue.pseudo | uppercase}} {{unVote.collegue.score}}
   <button (click)="supprimer(unVote)">Supprimer</button>
 </div>

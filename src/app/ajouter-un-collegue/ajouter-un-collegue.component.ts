@@ -24,15 +24,15 @@ export class AjouterUnCollegueComponent{
   submit(){
     this.errorMatricule = false;
     this.cService.exists(this.matricule, this.pseudo, this.photo)
-      .then(() => {
+      .subscribe(() => {
         this.router.navigate(['/accueil'])
-      }).catch((error: HttpErrorResponse) => {
+      }, ((error: HttpErrorResponse) => {
         if(error.status == 400) {
           this.errorMatricule = true;
         } else {
           this.router.navigate(['/accueil'])
         }
-      })
+      }))
   }
 
 }

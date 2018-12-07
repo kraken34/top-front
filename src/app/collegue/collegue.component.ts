@@ -1,15 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Collegue, Avis } from '../app.model';
+import { Collegue, Avis, Vote } from '../app.model';
 import { CollegueService } from '../services/collegue.service';
 
 @Component({
   selector: 'app-collegue',
   templateUrl: './collegue.component.html',
-  styleUrls: ['./collegue.component.css']
+  styleUrls: ['./collegue.component.css'],
 })
 export class CollegueComponent implements OnInit {
 
   @Input() collegue: Collegue;
+  error:boolean;
 
   constructor(private aService:CollegueService) {
 
@@ -20,8 +21,10 @@ export class CollegueComponent implements OnInit {
 
 
   onAvis(event:Avis) {
-    this.aService.donnerUnAvis(this.collegue, event).then(
-    newCollegue => {this.collegue = newCollegue}
+    this.aService.donnerUnAvis(this.collegue, event).subscribe(
+    newCollegue => {this.collegue = newCollegue; 
+    this.aService.lastValue.next(new Vote(this.collegue, event))}
+    , err => this.error = true
   )
 }
 

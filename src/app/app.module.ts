@@ -18,6 +18,9 @@ import { DetailsComponent } from './details/details.component';
 import { PageNonTrouveeComponent } from './page-non-trouvee/page-non-trouvee.component';
 import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
 import { FormsModule } from '@angular/forms';
+import { ScorePipe } from './pipes/score.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { VotreDernierAvisComponent } from './votre-dernier-avis/votre-dernier-avis.component';
 
 const appRoutes: Routes = [
   {path: 'accueil', component: AccueilComponent},
@@ -42,7 +45,10 @@ const appRoutes: Routes = [
     FooterComponent,
     DetailsComponent,
     PageNonTrouveeComponent,
-    AjouterUnCollegueComponent
+    AjouterUnCollegueComponent,
+    ScorePipe,
+    FilterPipe,
+    VotreDernierAvisComponent
   ],
   imports: [
     BrowserModule,

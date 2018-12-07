@@ -29,7 +29,7 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit() {
 
-    this.cService.listerCollegues().then(
+    this.cService.listerCollegues().subscribe(
       collegues => this.tabCollegues = collegues
       )
   }

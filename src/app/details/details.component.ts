@@ -18,7 +18,7 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private cService:CollegueService) {
     this.pseudo = route.snapshot.paramMap.get("pseudo")
     cService.getOneCollegue(this.pseudo)
-      .then(collegueRecup => this.collegue = collegueRecup)
+      .subscribe(collegueRecup => this.collegue = collegueRecup)
   }
 
   ngOnInit() {

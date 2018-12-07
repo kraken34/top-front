@@ -333,3 +333,43 @@ app-details{
 .champRequis.ng-invalid{
     border: 1px solid #CC1313;
 }
+
+
+
+/**************************************************** SCORE ***********************************************************************/
+.scoreStyle{
+    font-size: 20px;
+}
+
+.scorePos{
+    color: #15BC7A;
+}
+
+.scoreNeg{
+    color: #d72727;
+}
+
+
+.scoreJuste{
+    color: black;
+}
+
+.scorePos::before{
+    content: '+';
+}
+
+
+.formAjout {
+
+    background-color: #ededed;
+    border: 0;
+    padding: 10px 5px;
+    margin: 0 0 25px 15px;
+    width: 20%;
+
+}
+
+
+.dernierVote{
+    margin: 0 0 20px 15px;
+}

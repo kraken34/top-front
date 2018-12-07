@@ -1,3 +1,8 @@
-<div *ngFor="let unCol of collegues">
+<app-votre-dernier-avis></app-votre-dernier-avis>
+
+<input type="text" [(ngModel)]="saisie" placeholder="Rentrez un collègue" class="formAjout"/>
+
+<div *ngFor="let unCol of collegues|filter:saisie">
     <app-collegue [collegue]="unCol"></app-collegue>
 </div>
+
