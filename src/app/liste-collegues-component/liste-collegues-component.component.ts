@@ -10,7 +10,7 @@ export class ListeColleguesComponentComponent implements OnInit {
   @Output() eventVote:EventEmitter<Vote> = new EventEmitter<Vote>();
 @Input() collegues: Collegue[]; 
 
-filtreP:string
+filtreP:string;
 
   constructor() { }
 
