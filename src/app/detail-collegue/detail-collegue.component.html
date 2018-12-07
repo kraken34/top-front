@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-carousel mouseWheel="true" timings="250ms ease-in" autoplay="true" autoplayInterval="1000" proportion="50"
+    maxWidth="720px">
+    <mat-carousel-slide *ngFor="let col of collegue.imageUrl" class="carousel">
+      <img [src]="col">
+    </mat-carousel-slide>
+  </mat-carousel>
+  <mat-card-title>{{collegue.pseudo | uppercase}}</mat-card-title>
+  <mat-card-content>
+    <p>Le score de sympathie de {{collegue.pseudo}} est actuellement de : {{collegue.score}} points !</p>
+    <!-- <p>{{collegue.nom}}, {{collegue.prenom}}, {{collegue.email}}, {{collegue.adresse}} </p>-->
+<!--
+  </mat-card-content>
+  <app-avis-component class="avis" (change)="traiter($event)"></app-avis-component>
+</mat-card> -->
