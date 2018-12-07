@@ -16,6 +16,7 @@ import { DetailComponent } from './detail/detail.component';
 import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
 import { FormsModule} from '@angular/forms';
 import { ScorePipe } from './pipes/score.pipe';
+import { FiltrePseudoPipe } from './pipes/filtre-pseudo.pipe';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     AproposComponent,
     DetailComponent,
     AjouterUnCollegueComponent,
-    ScorePipe
+    ScorePipe,
+    FiltrePseudoPipe
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ import { CollegueService } from '../services/collegue.service';
 })
 export class DetailComponent implements OnInit {
 
-  collegue: Collegue;
+  @Input() collegue: Collegue;
   pseudo: string;
 
   constructor(private route: ActivatedRoute, private col: CollegueService) {
