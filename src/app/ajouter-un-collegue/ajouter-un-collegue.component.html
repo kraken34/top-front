@@ -1,0 +1,17 @@
+<h1>{{titre}}</h1>
+<form (ngSubmit)="submit()" #local="ngForm">
+    
+  <div class="md-form">
+    <input class="form-control" [(ngModel)]="formInput.matricule" name="matricule" placeholder="matricule" required><br>
+  </div>
+
+  <div class="md-form">
+    <input class="form-control" [(ngModel)]="formInput.pseudo" required minlength="2" name="pseudo" placeholder="pseudo"><br>
+  </div>  
+
+  <div class="md-form">
+    <input class="form-control" [(ngModel)]="formInput.url"  name="image" placeholder="image"><br>
+  </div>
+
+    <button [disabled]="!local.valid" class="btn btn-outline-primary btn-rounded waves-effect" type="submit">Ajouter</button>
+</form>
