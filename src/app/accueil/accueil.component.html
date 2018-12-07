@@ -10,13 +10,13 @@
   </div>
   <div class="row">
     <div class="md-form row">
-      <input mdbInputDirective type="text" id="form1" class="form-control">
+      <input mdbInputDirective type="text" id="form1" [(ngModel)]="filterName" class="form-control">
       <label for="form1" class="">filtrer par pseudo</label>
     </div>
   </div>
   <div class="row">
     <div class="col-8">
-      <app-liste-collegues (vote)="addVote($event)" [tabCollegue]="expandable"></app-liste-collegues>
+      <app-liste-collegues (vote)="addVote($event)" [filterName]="filterName" [tabCollegue]="expandable"></app-liste-collegues>
     </div>
     <div class="col-4 grey lighten-2">
       <app-historique-votes [listVote]="votes"></app-historique-votes>

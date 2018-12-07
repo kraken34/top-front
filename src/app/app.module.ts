@@ -21,6 +21,7 @@ import { CollegueDetailComponent } from './collegue-detail/collegue-detail.compo
 import { FormsModule }   from '@angular/forms';
 import { AjouterUnCollegueComponent } from './ajouter-un-collegue/ajouter-un-collegue.component';
 import { ScorePipe } from './pipes/score.pipe';
+import { FiltrerByPseudoPipe } from './pipes/filtrer-by-pseudo.pipe';
 
 const appRoutes: Routes = [
 
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, BandeauComponent, CollegueComponent, AvisComponent, ListeColleguesComponent, HistoriqueVotesComponent, AccueilComponent, AproposComponent,PageNonTrouveeComponent, MenuComponent, CollegueDetailComponent, AjouterUnCollegueComponent, ScorePipe
+    AppComponent, BandeauComponent, CollegueComponent, AvisComponent, ListeColleguesComponent, HistoriqueVotesComponent, AccueilComponent, AproposComponent,PageNonTrouveeComponent, MenuComponent, CollegueDetailComponent, AjouterUnCollegueComponent, ScorePipe, FiltrerByPseudoPipe
   ],
   imports: [
     BrowserModule,

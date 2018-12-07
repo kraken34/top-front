@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-4 grey lighten-2" id="collegue-item" *ngFor="let col of tabCollegue">
+  <div class="col-4 grey lighten-2" id="collegue-item" *ngFor="let col of tabCollegue|filtrerByPseudo:filterName">
     <app-collegue (vote)="faitPasser($event)" [collegue]="col"></app-collegue>
   </div>
 </div>

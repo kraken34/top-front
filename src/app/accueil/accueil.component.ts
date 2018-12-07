@@ -12,6 +12,7 @@ export class AccueilComponent implements OnInit {
   title = 'Accueil';
   expandable:Collegue[];
   votes:Vote[];
+  filterName:string;
 
   constructor(private pService: CollegueService) {
     this.pService.listerCollegues().then(listCollegues => this.expandable = listCollegues);
