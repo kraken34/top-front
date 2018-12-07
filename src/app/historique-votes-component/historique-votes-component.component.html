@@ -1,0 +1,18 @@
+
+
+<p> 
+  historiques votes!
+
+</p>
+<div class = container> 
+<div class = row > 
+  <div class = "col-6">
+<li *ngFor=" let vote of listevote "> 
+    <div >{{vote.colleg.pseudo}}  </div>
+    <app-collegue-component [collegue]="vote.colleg"></app-collegue-component>
+    <button (click)="suppr(vote)">Supprimer</button>
+
+</li>
+</div>
+</div>
+</div>

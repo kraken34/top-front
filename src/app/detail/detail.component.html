@@ -1,0 +1,31 @@
+
+
+<div class = container> 
+
+<img src="{{collegue.listImages[0]}}" height=" 400" width="400">
+
+<a routerLink="/collegue/{{collegue.pseudo}}"> {{collegue.pseudo}} </a>
+
+{{collegue.score}} <br>
+
+<table class="table">
+    <tr>
+      <td>Nom :</td>
+      <td>{{collegue.nom}}</td>
+    </tr>
+    <tr>
+      <td>Prenom :</td>
+      <td>{{collegue.prenom}}</td>
+    </tr>
+    <tr>
+  <td>Email :</td>
+      <td>{{collegue.email}}</td>
+    </tr>
+    <tr>
+      <td>Adresse :</td>
+      <td>{{collegue.adresse}}</td>
+    </tr>
+  </table>
+</div>
+
+<app-avis-component> </app-avis-component>
